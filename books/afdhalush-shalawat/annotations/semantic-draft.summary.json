@@ -1,0 +1,478 @@
+{
+  "schema_version": "0.1",
+  "work_id": "afdhalush-shalawat",
+  "source": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat/clean/manuscript.md",
+  "count": 1768,
+  "kind_counts": {
+    "body": 1683,
+    "matn": 59,
+    "quote": 26
+  },
+  "role_counts": {
+    "body": 1683,
+    "matn": 59,
+    "quote": 26
+  },
+  "low_confidence_count": 1683,
+  "low_confidence_sample": [
+    {
+      "id": "ASH-00001",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 1,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "يوسف النبهاني ٢٣٩١ م-٠٥٣١ ه / ٨٤٨١-٥٦٢١ يوسف بن إسماعيل بن يوسف النبهاني.",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00002",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 2,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "شاعر أديب، من رجال القضاء، نسبته إلى بني نبهان من عرب البادية بفلسطين.",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00003",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 3,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "٩٨٢١ه(، وذهب إلى-استوطنوا قرية)إجزم(التابعة لحيفا في شمالي فلسطين، وبها ولد ونشأ وتعلم في الأزهر بمصر سنة)٣٨٢١ الأستانة فعمل في تحرير جريدة)الجوائب(وتصحيح ما يطبع في مطبعتها.",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00004",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 4,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "ثم عاد إلى بلاد الشام)٦٩٢١ه(فتنقل في أعمال القضاء إلى أن أصبح رئيس محكمة الحقوق)٥٠٣١ه(وأقام زيادة على عشرين سنة، ثم سافر إلى المدينة مجاوراًونشبت الحرب العامة الأولى فعاد إلى قريت…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00005",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 5,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "له كتب كثيرة منها: جامع كرامات الأولياء",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00006",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 6,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "المجموعة النبهانية في المدائح النبوية، رياض الجنة في أذكار الكتاب والسنة",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00007",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 7,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "الأنوار المحمدية، الفتح الكبير، تهذيب النفوس",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00009",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 9,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "مقدمة"
+      ],
+      "signals": [
+        "contains_quran_signal"
+      ],
+      "text_preview": "الحمد للّٰه رب العالمين حمداً يقترن بحكمته البالغة، ويحيط بنعمه السابغة، ويخص نعمته عليّ بالإيمان والإسلام فإنها أعظم نعمه، وأن جعلني من أمة سيدنا محمد خير الأنام وجعلها خير أمّة،…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00010",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 10,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "مقدمة"
+      ],
+      "signals": [
+        "contains_quran_signal"
+      ],
+      "text_preview": ")أما بعد(فيقول الفقير المذنب يوسف بن إسماعيل النبهاني إني تفكرت في كثرة ذنوبي وقلة أعمالي الصالحة فعظم بذلك بلائي، وغلب خوفي على رجائي، ثم ألهمني اللّٰه سبحانه أن لا دواء لهذا الد…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00011",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 11,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "أبين فيه فضلها إجمالاًوفوائدها،",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00012",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 12,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "والقسم الثاني: أفصّ ل فيه غرر كيفياتها وفرائدها، وأنسب كل صيغة إلى أهلها، مع بيان رواتها وفضلها، وليس لي في ذلك أدنى فضل، إلا مجرد النقل، ولم آل جهداًفي اختيار الكتب المعتمدة وأهل…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00013",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 13,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "ويشتمل القسم الأول على سبعة فصول:",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00014",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 14,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": ".الفصل الأول: في تفسير أن اللّٰه وملائكته الآية وما يناسبها من الأقوال",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00015",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 15,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "الفصل الثاني: في الأحاديث التي ورد فيها الترغيب في الصلاة عليه صلى اللّٰه عليه وسلم بصيغة الأمر ونحوه وما ورد فيها ذكر الأعداد كقوله عليه الصلاة والسلام من صلى على واحدة صلى اللّٰ…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00016",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 16,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "الفصل الثالث: في الأحاديث التي ورد فيها الحثّ على الصلاة عليه صلى اللّٰه عليه وسلم يوم الجمعة وليلتها وبيان حكمة ذلك. الفصل الرابع: في الأحاديث التي ورد فيها الترغيب في الإكثار من…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00017",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 17,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "وتشتمل الخاتمة على سبع قصائد فرائد، جعلتها لخرائد هذه الصلوات قلائد، فعليك بهذا الكتاب أيها الأخ المسلم المحب لنبيه الراغب في الصلاة عليه لصلاح دينه ودنياه، فإنك مهما فتشت لا تكاد…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00018",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 18,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "في تفسير آية إِنَّ اللّٰه وملائِكَتَهُ يُصَلُّونَ على النَّبِيّ يا أَيُّ ها الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلَيماًوما يناسبها من الأقوال.",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00019",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 19,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "contains_quran_signal"
+      ],
+      "text_preview": "قال العلامة شمس الدين الخطيب)يُصَلُّونَ عَلَى النَّبِي(أي محمد صلى اللّٰه عليه وسلم قال ابن عباس أراد الحق سبحانه أن اللّٰه تعالى يرحم النبي والملائكة يدعون له والصلاة من اللّٰه ا…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00020",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 20,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "contains_quran_signal"
+      ],
+      "text_preview": "بقوله تعالى: يا أَيها الذين آمنوا صلوا عليه وسلموا تسليماً(وقال الإمام القرطبي: لا خلاف في وجوبها في العمر مرة وأَنها واجبة في كل حين وجوب السنن المؤكدة، وسبقه ابن عطية في ذلك فقا…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00021",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 21,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "وفي الدر المنثور للحافظ السيوطي قال: لما نزلت هذه الآية جعل الناس يهنونه صلى اللّٰه عليه وسلم، وفي كثير من التفاسير وكتب الحديث عن عبد الرحمن ابن أبي ليلى أنه لقيه كعب ابن عجرة فق…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00022",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 22,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "قال قولوا اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم وعلى آل إبراهيم وبارك على محمد وعلى آل محمد كما باركت على إبراهيم وعلى آل إبراهيم إنك حميد مجيد ورويت بزيادة ونقص.",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00023",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 23,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": ")فائدة(نقل العلامة القسطلاني في شرحه على البخاري وكتابه المواهب اللدنية عن العارف الرباني أبي محمد المرجاني أنه قال: وسر قوله صلى اللّٰه عليه وسلم كما صليت على إبراهيم وكما باركت…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00024",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 24,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "أفضل الأنبياء بعد نبينا محمد صلى اللّٰه عليه وسلم ا.ه. وقال الحافظ السخاوي أن المقصود من هذه الآية أن اللّٰه تعالى أخبر عباده بمنزلة نبيه صلى اللّٰه عليه وسلم عنده في الملأ الأعلى…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00025",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 25,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": ")فائدة مهمة(قال العلامة أحمد بن المبارك في كتاب الإبريز الذي تلقاه من شيخه غوث الزمان وبحر العرفان سيدنا عبد العزيز الدباغ في الباب الحادي عشر وسمعته رضي اللّٰه عنه يقول في قولهم…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    },
+    {
+      "id": "ASH-00026",
+      "work_id": "afdhalush-shalawat",
+      "sequence": 26,
+      "kind": "body",
+      "role": "body",
+      "layout": "body",
+      "status": "machine_draft",
+      "confidence": 0.52,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "signals": [
+        "default_body"
+      ],
+      "text_preview": "بالصلاة على النبي صلى اللّٰه عليه وسلم دون التسبيح وغيره من الأذكار فقال رضي اللّٰه عنه لأنم الجنة أصلها من نور النبي صلى اللّٰه عليه وسلم فهي تحن إليه حنين الولد إلى أبيه وإذا سم…",
+      "generated_by": "scripts/build_semantic_annotations.py"
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Surau Clean: Afdhalush Manuscript",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/clean_manuscript.py",
+        "--book-dir",
+        "books/afdhalush-shalawat"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Generate: Afdhalush Typst Edition",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_typst_edition.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v0",
+        "--manuscript",
+        "clean/manuscript.md"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Annotate: Afdhalush Semantic Draft",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_semantic_annotations.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--manuscript",
+        "clean/manuscript.md"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Generate: Afdhalush V1 Enhanced",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_typst_edition.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v1-enhanced",
+        "--manuscript",
+        "clean/manuscript.md",
+        "--style",
+        "enhanced-compact",
+        "--annotations",
+        "annotations/semantic-draft.jsonl",
+        "--cover-title-id",
+        "طبعة سوراو المحسّنة",
+        "--cover-author",
+        "يوسف بن إسماعيل النبهاني",
+        "--cover-edition",
+        "الطبعة التجريبية المحسّنة"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Enrich: Afdhalush LLM Layout Dry Run",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/enrich_semantics_llm.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--limit",
+        "40",
+        "--dry-run"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Enrich: Afdhalush LLM Layout Proposals",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/enrich_semantics_llm.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--limit",
+        "40",
+        "--model",
+        "deepseek-v4-pro"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Compile: Afdhalush V1 Enhanced",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/book.typ",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/output.pdf"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Watch: Afdhalush V1 Enhanced",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/book.typ",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/output.pdf"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Generate: Afdhalush V1 Page Map",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_page_map.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v1-enhanced",
+        "--font-path",
+        "assets/fonts/quran/hafs"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Sync: Afdhalush V1 Edition Refs",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/sync_edition_refs.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v1-enhanced"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau QA: Afdhalush V1 Layout PDF",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/qa_layout_pdf.py",
+        "--pdf",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/output.pdf",
+        "--source-typst",
+        "books/afdhalush-shalawat/editions/surau-v1-enhanced/book.typ",
+        "--out",
+        "reports/layout-qa/afdhalush-shalawat-surau-v1-enhanced.json"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Watch: Afdhalush Full Book",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-v0/book.typ",
+        "books/afdhalush-shalawat/editions/surau-v0/output.pdf"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Compile: Afdhalush Full Book",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-v0/book.typ",
+        "books/afdhalush-shalawat/editions/surau-v0/output.pdf"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Generate: Afdhalush Page Map",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_page_map.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v0"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Sync: Afdhalush Edition Refs",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/sync_edition_refs.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--edition",
+        "surau-v0"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Translate: Afdhalush ID Sample Dry Run",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/translate_passages.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--lang",
+        "id",
+        "--id",
+        "ASH-00008,ASH-00009,ASH-00367",
+        "--dry-run"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Translate: Afdhalush EN Sample Dry Run",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/translate_passages.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--lang",
+        "en",
+        "--id",
+        "ASH-00008,ASH-00009,ASH-00367",
+        "--dry-run"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Review: Afdhalush Translation Batch",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_translation_review.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--lang",
+        "id",
+        "--lang",
+        "en"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau QA: All Books",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/qa_report.py"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Compile: Afdhalush Enhanced Prototype",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-enhanced-prototype/book.typ",
+        "books/afdhalush-shalawat/editions/surau-enhanced-prototype/output.pdf"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Watch: Afdhalush Enhanced Prototype",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-enhanced-prototype/book.typ",
+        "books/afdhalush-shalawat/editions/surau-enhanced-prototype/output.pdf"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Compile: Afdhalush Enhanced Optimized",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-enhanced-optimized/book.typ",
+        "books/afdhalush-shalawat/editions/surau-enhanced-optimized/output.pdf"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Typst Watch: Afdhalush Enhanced Optimized",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "--font-path",
+        "assets/fonts/quran/hafs",
+        "books/afdhalush-shalawat/editions/surau-enhanced-optimized/book.typ",
+        "books/afdhalush-shalawat/editions/surau-enhanced-optimized/output.pdf"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+schema_version: 0.1
+id: afdhalush-shalawat
+title_ar: أفضل الصلوات على سيد السادات
+title_id: Afdhalush Shalawat
+author: Yusuf bin Ismail an-Nabhani
+author_ar: يوسف بن إسماعيل النبهاني
+language: ar
+canonical_language: ar
+status: draft_extraction
+heading_profile: shalawat
+default_edition: surau-v0
+working_edition: surau-v1-enhanced
+public_citation:
+  source: default_edition
+  anchor: passage_id
+translation_policy:
+  anchor_language: ar
+  anchor_field: source_passage_id
+source:
+  pdf: sources/pdfs/AFDHALUSH SHALAWAT.pdf
+  pages: 125
+outputs:
+  raw_json: raw/raw.json
+  raw_markdown: raw/raw.md
+  manuscript: manuscript.md
+  clean_manuscript: clean/manuscript.md
+  annotations: annotations/semantic-draft.jsonl
+  cleaning_report: clean/cleaning-report.json
+  passages: passages.jsonl
+  editions:
+    surau-v0: editions/surau-v0/output.pdf
+    surau-v1-enhanced: editions/surau-v1-enhanced/output.pdf

@@ -1,0 +1,24 @@
+{
+  "work_id": "afdhalush-shalawat",
+  "edition": "surau-v1-enhanced",
+  "style": "enhanced-compact",
+  "layout": "/Users/macmini/Documents/Surau-Database/layouts/surau-arabic-book",
+  "theme_import": "theme.typ",
+  "components_import": "components.typ",
+  "source": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat/clean/manuscript.md",
+  "annotations": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat/annotations/semantic-draft.jsonl",
+  "annotated_passages": 1768,
+  "annotation_kinds": {
+    "body": 1683,
+    "matn": 59,
+    "quote": 26
+  },
+  "elements": 1852,
+  "passages": 1768,
+  "passage_roles": {
+    "body": 1683,
+    "matn": 59,
+    "quote": 26
+  },
+  "headings": 84
+}

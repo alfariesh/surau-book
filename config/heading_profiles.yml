@@ -1,0 +1,73 @@
+profiles:
+  default:
+    description: Keep the PDF outline levels unchanged, while recording source_level.
+    mode: toc
+    rules: []
+
+  generic-shamela:
+    description: Common Shamela-style book outline with sections, chapters, and small notes.
+    mode: toc
+    rules:
+      - pattern: '^القسم'
+        level: 1
+      - pattern: '^الخاتمة'
+        level: 1
+      - pattern: '^الفصل|^لفصل'
+        level: 2
+      - pattern: '^\(?فائدة|^\(?تنبيه|^مسألة'
+        level: 3
+
+  shalawat:
+    description: Shalawat collections with sections, chapters, prayers, and poems.
+    mode: toc
+    rules:
+      - pattern: '^مقدمة'
+        level: 1
+      - pattern: '^القسم'
+        level: 1
+      - pattern: '^الخاتمة'
+        level: 1
+      - pattern: '^الفصل|^لفصل'
+        level: 2
+      - pattern: '^الصلاة'
+        level: 2
+      - pattern: '^القصيدة'
+        level: 2
+      - pattern: '^\(?فائدة|^\(?تنبيه|^مسألة'
+        level: 3
+
+  grammar:
+    description: Multi-volume grammar commentaries where volumes are H1 and topics are H2.
+    mode: toc
+    rules:
+      - pattern: '^المجلد|^الجزء'
+        level: 1
+      - pattern: '.*'
+        level: 2
+
+  quran-tafsir:
+    description: Surah as H1, ayah number as H2, and ayah text as H3.
+    mode: toc
+    rules:
+      - source_level: 1
+        level: 1
+      - source_level: 2
+        level: 2
+      - source_level: 3
+        level: 3
+
+  biography:
+    description: Biographical/tarikh books with a flat PDF outline.
+    mode: biography
+    start_pattern: '^أبو بكر الصديق'
+    default_before_start_level: 1
+    default_after_start_level: 2
+    rules:
+      - pattern: '.*[0-9٠-٩]+\s*هـ\s*[ـ-]?\s*[0-9٠-٩]+\s*هـ'
+        level: 1
+      - pattern: '^أبو بكر الصديق'
+        level: 1
+      - pattern: '^الخلفاء|^الدولة|^دولة|^أمراء مكة|^أمراء المدينة|^نبذة عن الدول'
+        level: 1
+      - pattern: '^قصيدة للمؤلف'
+        level: 1

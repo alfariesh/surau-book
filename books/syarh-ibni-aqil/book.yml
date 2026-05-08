@@ -1,0 +1,19 @@
+schema_version: 0.1
+id: syarh-ibni-aqil
+title_ar: شرح ابن عقيل على ألفية ابن مالك
+title_id: Syarh Ibni Aqil ala Alfiyati Ibni Malik
+author: ابن عقيل
+language: ar
+canonical_language: ar
+status: draft_extraction
+heading_profile: grammar
+source:
+  pdf: sources/pdfs/SYARH IBNI AQIL ‘ALA ALFIYATI IBNI MALIK.pdf
+  pages: 415
+outputs:
+  raw_json: raw/raw.json
+  raw_markdown: raw/raw.md
+  manuscript: manuscript.md
+  clean_manuscript: clean/manuscript.md
+  cleaning_report: clean/cleaning-report.json
+  passages: passages.jsonl

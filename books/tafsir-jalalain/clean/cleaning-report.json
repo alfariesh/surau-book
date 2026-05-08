@@ -1,0 +1,23 @@
+{
+  "source": "/Users/macmini/Documents/Surau-Database/books/tafsir-jalalain/manuscript.md",
+  "profile": {
+    "name": "tafsir-jalalain",
+    "rules": [
+      "drop_runtime_error_lines"
+    ],
+    "description": "Drop Shamela/runtime error lines from the source PDF text layer."
+  },
+  "lines": 47358,
+  "changes": {
+    "common_particle_joined": 652,
+    "diacritic_joined": 0,
+    "drop_runtime_error_lines": 14,
+    "paren_spacing_fixed": 66,
+    "punctuation_spacing_fixed": 0,
+    "spaces_collapsed": 0,
+    "stars_replaced": 0,
+    "tatweel_removed": 3441
+  },
+  "suspicious_samples": [],
+  "book_id": "tafsir-jalalain"
+}

@@ -1,0 +1,10 @@
+schema_version: 0.1
+work_id: afdhalush-shalawat
+lang: en
+source_language: ar
+source_passages: books/afdhalush-shalawat/passages.jsonl
+status: machine_draft
+translator: Surau LLM Draft
+translation_type: meaning
+citation_policy: cite_source_passage
+model: deepseek-v4-pro

@@ -1,0 +1,16 @@
+{
+  "work_id": "afdhalush-shalawat",
+  "edition": "surau-v0",
+  "style": "classic-turath",
+  "layout": "/Users/macmini/Documents/Surau-Database/layouts/surau-arabic-book",
+  "theme_import": "theme.typ",
+  "components_import": "components.typ",
+  "source": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat/clean/manuscript.md",
+  "elements": 1852,
+  "passages": 1768,
+  "passage_roles": {
+    "body": 1709,
+    "matn": 59
+  },
+  "headings": 84
+}

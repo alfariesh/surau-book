@@ -1,0 +1,781 @@
+[
+  {
+    "book_id": "afdhalush-shalawat",
+    "status": "ok",
+    "warnings": [
+      {
+        "severity": "info",
+        "message": "5 TOC entries were not found in manuscript headings"
+      },
+      {
+        "severity": "info",
+        "message": "13 passages longer than 3000 chars"
+      }
+    ],
+    "passages": 1768,
+    "headings": 84,
+    "clean_headings": 84,
+    "clean_artifacts": {},
+    "clean_suspicious_count": 5,
+    "page_maps": [
+      {
+        "edition": "surau-v0",
+        "path": "books/afdhalush-shalawat/editions/surau-v0/page-map.json",
+        "entry_count": 1768,
+        "passage_count": 1768,
+        "page_semantics": "start_page",
+        "page_range": {
+          "min": 5,
+          "max": 113,
+          "unique": 108
+        },
+        "validation": {
+          "duplicate_ids": [],
+          "missing_passage_ids": [],
+          "extra_page_map_ids": []
+        },
+        "edition_refs": {
+          "present_count": 1768,
+          "missing": [],
+          "mismatched": []
+        },
+        "public_citations": {
+          "is_default_edition": true,
+          "present_count": 1768,
+          "missing": [],
+          "mismatched": []
+        }
+      },
+      {
+        "edition": "surau-v1-enhanced",
+        "path": "books/afdhalush-shalawat/editions/surau-v1-enhanced/page-map.json",
+        "entry_count": 1768,
+        "passage_count": 1768,
+        "page_semantics": "start_page",
+        "page_range": {
+          "min": 5,
+          "max": 106,
+          "unique": 101
+        },
+        "validation": {
+          "duplicate_ids": [],
+          "missing_passage_ids": [],
+          "extra_page_map_ids": []
+        },
+        "edition_refs": {
+          "present_count": 1768,
+          "missing": [],
+          "mismatched": []
+        },
+        "public_citations": {
+          "is_default_edition": false,
+          "present_count": 0,
+          "missing": [],
+          "mismatched": []
+        }
+      }
+    ],
+    "public_citations": 1768,
+    "translations": [
+      {
+        "lang": "en",
+        "path": "books/afdhalush-shalawat/translations/en/passages.jsonl",
+        "metadata": {
+          "schema_version": 0.1,
+          "work_id": "afdhalush-shalawat",
+          "lang": "en",
+          "source_language": "ar",
+          "source_passages": "books/afdhalush-shalawat/passages.jsonl",
+          "status": "machine_draft",
+          "translator": "Surau LLM Draft",
+          "translation_type": "meaning",
+          "citation_policy": "cite_source_passage",
+          "model": "deepseek-v4-pro"
+        },
+        "count": 1,
+        "source_coverage": {
+          "translated": 1,
+          "source_total": 1768
+        },
+        "json_errors": [],
+        "duplicate_ids": [],
+        "duplicate_source_passage_ids": [],
+        "missing_source_passage_id": [],
+        "invalid_source_passage_id": [],
+        "missing_lang": [],
+        "missing_text": [],
+        "missing_translation_status": [],
+        "source_citation_missing": [],
+        "missing_metadata": [],
+        "invalid_translation_status": [],
+        "id_shape_mismatches": [],
+        "source_sequence_mismatches": [],
+        "source_citation_mismatches": [],
+        "arabic_leak_rows": [],
+        "length_ratio_outliers": []
+      },
+      {
+        "lang": "id",
+        "path": "books/afdhalush-shalawat/translations/id/passages.jsonl",
+        "metadata": {
+          "schema_version": 0.1,
+          "work_id": "afdhalush-shalawat",
+          "lang": "id",
+          "source_language": "ar",
+          "source_passages": "books/afdhalush-shalawat/passages.jsonl",
+          "status": "machine_draft",
+          "translator": "Surau LLM Draft",
+          "translation_type": "meaning",
+          "citation_policy": "cite_source_passage",
+          "model": "google/gemini-3.1-flash-lite-preview"
+        },
+        "count": 1,
+        "source_coverage": {
+          "translated": 1,
+          "source_total": 1768
+        },
+        "json_errors": [],
+        "duplicate_ids": [],
+        "duplicate_source_passage_ids": [],
+        "missing_source_passage_id": [],
+        "invalid_source_passage_id": [],
+        "missing_lang": [],
+        "missing_text": [],
+        "missing_translation_status": [],
+        "source_citation_missing": [],
+        "missing_metadata": [],
+        "invalid_translation_status": [],
+        "id_shape_mismatches": [],
+        "source_sequence_mismatches": [],
+        "source_citation_mismatches": [],
+        "arabic_leak_rows": [],
+        "length_ratio_outliers": []
+      }
+    ],
+    "toc_unmatched": 5,
+    "problem_pages": [
+      {
+        "page": 29,
+        "score": 2,
+        "reasons": {
+          "toc_not_found": 2
+        }
+      },
+      {
+        "page": 15,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 27,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 41,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 46,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 49,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 54,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 55,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 56,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 57,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 58,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 60,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 66,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 68,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 70,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 71,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 73,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 74,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 75,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 123,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      }
+    ]
+  },
+  {
+    "book_id": "syarh-ibni-aqil",
+    "status": "ok",
+    "warnings": [
+      {
+        "severity": "info",
+        "message": "5 TOC entries were not found in manuscript headings"
+      },
+      {
+        "severity": "info",
+        "message": "43 passages longer than 3000 chars"
+      }
+    ],
+    "passages": 2181,
+    "headings": 77,
+    "clean_headings": 77,
+    "clean_artifacts": {},
+    "clean_suspicious_count": 170,
+    "page_maps": [],
+    "public_citations": 0,
+    "translations": [],
+    "toc_unmatched": 5,
+    "problem_pages": [
+      {
+        "page": 19,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 22,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 24,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 26,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 31,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 34,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 36,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 39,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 42,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 47,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 64,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 75,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 87,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 96,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 98,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 102,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 114,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 118,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 122,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 126,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 137,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 145,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 173,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 178,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 182,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      }
+    ]
+  },
+  {
+    "book_id": "tafsir-jalalain",
+    "status": "ok",
+    "warnings": [
+      {
+        "severity": "info",
+        "message": "Very detailed outline; consider a specialized mode such as Quran/tafsir"
+      },
+      {
+        "severity": "info",
+        "message": "33 TOC entries were not found in manuscript headings"
+      },
+      {
+        "severity": "info",
+        "message": "4 passages longer than 3000 chars"
+      }
+    ],
+    "passages": 7468,
+    "headings": 12473,
+    "clean_headings": 12473,
+    "clean_artifacts": {},
+    "clean_suspicious_count": 0,
+    "page_maps": [],
+    "public_citations": 0,
+    "translations": [],
+    "toc_unmatched": 33,
+    "problem_pages": [
+      {
+        "page": 566,
+        "score": 2,
+        "reasons": {
+          "short_passage": 2
+        }
+      },
+      {
+        "page": 830,
+        "score": 2,
+        "reasons": {
+          "short_passage": 1,
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 422,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 424,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 455,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 503,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 518,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 519,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 525,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 533,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 569,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 635,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 641,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 660,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 694,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 698,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 728,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 738,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 753,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 762,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 780,
+        "score": 1,
+        "reasons": {
+          "toc_not_found": 1
+        }
+      },
+      {
+        "page": 821,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 842,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 864,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 888,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      }
+    ]
+  },
+  {
+    "book_id": "tarikh-al-khulafa",
+    "status": "ok",
+    "warnings": [
+      {
+        "severity": "info",
+        "message": "5 passages longer than 3000 chars"
+      }
+    ],
+    "passages": 1745,
+    "headings": 147,
+    "clean_headings": 147,
+    "clean_artifacts": {},
+    "clean_suspicious_count": 60,
+    "page_maps": [],
+    "public_citations": 0,
+    "translations": [],
+    "toc_unmatched": 0,
+    "problem_pages": [
+      {
+        "page": 23,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 43,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 57,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 77,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 93,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 133,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      },
+      {
+        "page": 158,
+        "score": 1,
+        "reasons": {
+          "short_passage": 1
+        }
+      },
+      {
+        "page": 204,
+        "score": 1,
+        "reasons": {
+          "long_passage": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1",
+  "started_at": "2026-05-07T09:18:33.732216+00:00",
+  "book_dir": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat",
+  "lang": "id",
+  "models": [
+    "z-ai/glm-5.1",
+    "deepseek-v4-pro",
+    "minimax/minimax-m2.7",
+    "qwen/qwen3.6-flash"
+  ],
+  "source_ids": [
+    "ASH-00008",
+    "ASH-00009",
+    "ASH-00367"
+  ],
+  "text_overlay_count": 365,
+  "samples": [
+    {
+      "id": "ASH-00008",
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00008.",
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_text_length": 24,
+      "source_text_preview": "بسم اللّٰه الرحمن الرحيم",
+      "results": [
+        {
+          "model": "z-ai/glm-5.1",
+          "ok": true,
+          "latency_seconds": 19.456,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ok": true,
+          "latency_seconds": 12.026,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "minimax/minimax-m2.7",
+          "ok": true,
+          "latency_seconds": 11.121,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "qwen/qwen3.6-flash",
+          "ok": true,
+          "latency_seconds": 6.656,
+          "translation": "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.",
+          "notes": [],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "id": "ASH-00009",
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00009.",
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_text_length": 868,
+      "source_text_preview": "الحمد للّٰه رب العالمين حمداً يقترن بحكمته البالغة، ويحيط بنعمه السابغة، ويخص نعمته عليّ بالإيمان والإسلام فإنها أعظم نعمه، وأن جعلني من أمة سيدنا محمد خير الأنام وجعلها خير أمّة، كما أحمده على أن صلّى هو وملائكته على هذا النبي الكريم وأمر المؤمنين بذلك تشريفاًله وتعظيماً، فقال تعالى:} إنَّ اللّٰه وَمَلاَئِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّ هَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمَا {، اللهم صلِّ عليه وعلى آله أفضل صلاة صليتها أو تصليها على أحد من عبادك الأبرار والمقربين، تكون صلاتك على سيدنا إبراهيم وآله مع كمالها بالنسبة إليها كالذرة بالنسبة إلى جميع العالمين، وعلى إخوانه الأنبياء الذين تقدموه في الزمان، تقدم الأمراء على السلطان، وأصحابه نجوم الهدى، وأئمة أمته ومن بهم اقتدى، وسلم اللهم عليهم تسليماًكذلك، فالكل مملوك وأنت وحدك المالك، وأشهد أن لا إله إلا اللّٰه وحده لا شريك له، وأشهد أن سيدنا محمداًنبيّه ورسوله خير نبيّ أرسله،",
+      "results": [
+        {
+          "model": "z-ai/glm-5.1",
+          "ok": true,
+          "latency_seconds": 116.817,
+          "translation": "Segala puji bagi Allah, Tuhan semesta alam, dengan pujian yang berpadu dengan hikmah-Nya yang sempurna, dan yang meliputi nikmat-nikmat-Nya yang melimpah, serta yang mengkhususkan nikmat-Nya atasku berupa keimanan dan Islam, maka sesungguhnya itu adalah nikmat-Nya yang paling besar, dan bahwa Dia telah menjadikanku dari umat Sayyidina Muhammad sebaik-baik makhluk, dan menjadikannya sebaik-baik umat. Sebagaimana aku memuji-Nya atas fakta bahwa Dia dan para malaikat-Nya berselawat kepada Nabi yang mulia ini, dan Dia memerintahkan orang-orang mukmin untuk demikian sebagai bentuk pemuliaan dan pengagungan terhadapnya, maka Allah Ta'ala berfirman: \"Sesungguhnya Allah dan para malaikat-Nya berselawat kepada Nabi. Wahai orang-orang yang beriman, berselawatlah kalian kepadanya dan ucapkanlah salam dengan penghormatan yang sempurna.\" Ya Allah, limpahkanlah selawat kepadanya dan kepada keluarganya dengan selawat yang paling utama yang pernah Engkau limpahkan atau akan Engkau limpahkan kepada seorang pun dari hamba-hamba-Mu yang saleh dan yang didekatkan, sehingga selawat-Mu kepada Sayyidina Ibrahim dan keluarganya, meskipun disertai kesempurnaannya, jika dibandingkan dengannya sebagaimana zarrah dibandingkan dengan seluruh alam semesta. Dan (limpahkanlah selawat) kepada saudara-saudaranya dari kalangan para nabi yang mendahuluinya di masa lalu, sebagaimana mendahuluinya para amir di hadapan sultan, serta kepada para sahabatnya yang merupakan bintang-bintang petunjuk, para imam umatnya, dan orang-orang yang mengikuti jejak mereka. Dan semoga Ya Allah Engkau memberi salam kepada mereka dengan salam yang demikian itu pula, maka semuanya adalah milik (yang dikuasai) dan hanya Engkau semata Sang Pemilik. Aku bersaksi bahwa tidak ada tuhan selain Allah semata, tidak ada sekutu bagi-Nya, dan aku bersaksi bahwa Sayyidina Muhammad adalah nabi dan rasul-Nya, sebaik-baik nabi yang diutus-Nya.",
+          "notes": [
+            "Kata 'zarrah' (الذرة) dipertahankan karena merujuk pada partikel atau benda terkecil yang umum dalam kosakata pesantren.",
+            "Frasa 'تقدم الأمراء على السلطان' diterjemahkan secara harfiah sebagai 'mendahuluinya para amir di hadapan sultan' untuk menjaga struktur retoris penulis asli mengenai urutan kedudukan."
+          ],
+          "warnings": [
+            "Kalimat 'تكون صلاتك على سيدنا إبراهيم وآله مع كمالها بالنسبة إليها كالذرة بالنسبة إلى جميع العالمين' memiliki struktur yang sangat padat dan metaforis; terjemahan berupaya mempertahankan makna perbandingan skala yang ekstrem antara selawat kepada Nabi Ibrahim dan Nabi Muhammad."
+          ]
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ok": true,
+          "latency_seconds": 107.628,
+          "translation": "Segala puji bagi Allah, Tuhan semesta alam, pujian yang menyertai hikmah-Nya yang sempurna, meliputi segala nikmat-Nya yang melimpah, dan Dia mengkhususkan nikmat-Nya kepadaku berupa iman dan Islam, karena sesungguhnya itulah nikmat-Nya yang teragung, dan (aku memuji-Nya) karena Dia menjadikanku bagian dari umat tuan kami Muhammad, sebaik-baik makhluk, dan menjadikan umat itu sebagai umat terbaik. Sebagaimana aku memuji-Nya karena Dia—bersama para malaikat-Nya—telah bershalawat kepada Nabi yang mulia ini, dan memerintahkan kaum mukminin untuk melakukan hal itu sebagai pemuliaan dan pengagungan baginya. Maka Allah Ta'ala berfirman: {Sesungguhnya Allah dan para malaikat-Nya bershalawat kepada Nabi. Wahai orang-orang yang beriman, bershalawatlah kepadanya dan ucapkanlah salam dengan penghormatan yang sesungguhnya.} Ya Allah, limpahkanlah shalawat kepadanya dan kepada keluarganya, shalawat yang paling utama yang pernah Engkau limpahkan atau akan Engkau limpahkan kepada salah seorang dari hamba-hamba-Mu yang saleh dan dekat (kepada-Mu), sehingga shalawat-Mu kepada tuan kami Ibrahim dan keluarganya—dengan segala kesempurnaannya—bila dibandingkan dengannya bagaikan sebiji atom dibandingkan dengan seluruh alam. Dan (limpahkanlah shalawat juga) kepada saudara-saudaranya para nabi yang mendahuluinya dalam kurun waktu, bagaikan para amir yang mendahului seorang sultan, dan kepada para sahabatnya, bintang-bintang petunjuk, serta para imam umatnya dan setiap orang yang mengikuti mereka. Ya Allah, limpahkanlah pula salam kepada mereka dengan salam yang demikian pula. Karena semuanya adalah milik-Mu, dan hanya Engkau satu-satunya Pemilik. Aku bersaksi bahwa tiada tuhan selain Allah, satu-satunya, tiada sekutu bagi-Nya, dan aku bersaksi bahwa tuan kami Muhammad adalah Nabi dan Rasul-Nya, sebaik-baik nabi yang diutus-Nya.",
+          "notes": [],
+          "warnings": [
+            "Teks sumber memiliki kesalahan penulisan pada 'يَا أَيُّ هَا' yang seharusnya 'يَا أَيُّهَا' dan 'تسليماًكذلك' yang semestinya 'تسليماً كذلك'. Tanda kurung kurawal {} adalah penanda batas ayat, bukan bagian dari Al-Qur'an."
+          ]
+        },
+        {
+          "model": "minimax/minimax-m2.7",
+          "ok": true,
+          "latency_seconds": 41.049,
+          "translation": "segala puji bagi Allah Tuhan seluruh alam, pujian yang menyertai hikmah-Nya yang sempurna, dan mencakup nikmat-nikmat-Nya yang melimpah, dan terutama nikmat-Nya kepadaku berupa iman dan Islam, sesungguhnya itu adalah nikmat terbesarnya. Dan bahwa Dia menjadikanku dari umat Nabi Muhammad sebaik-baik makhluk, dan menjadikannya sebaik-baik umat, sebagaimana aku memuji-Nya karena Dia dan malaikat-malaikat-Nya pernah memberikan sholawat kepada Nabi yang mulia ini, dan memerintahkan orang-orang beriman untuk melakukannya sebagai penghormatan dan pengagungan bagi beliau. Allah Ta'ala berfirman: 'Sesungguhnya Allah dan malaikat-malaikat-Nya memberikan sholawat kepada Nabi. Wahai orang-orang yang beriman, bersholawatlah kalian kepadanya dan berilah salam dengan sejati-sejatinya.' Ya Allah, berilah sholawat kepadanya dan kepada keluarganya dengan sebaik-baik sholawat yang pernah Engkau berikan atau yang Engkau berikan kepada salah seorang dari hamba-hamba-Mu yang saleh lagi dekat. Semoga sholawat Engkau kepada Nabi Ibrahim dan keluarganya, meskipun dibanding dengan sholawat tersebut maka sholawat itu bagaikan zarrah dibandingkan dengan seluruh alam. Dan (juga sholawat) kepada saudara-saudaranya para nabi yang mendahuluinya dalam masa, bagaikan para amir yang mendahului sultan. Dan kepada para sahabatnya yang merupakan bintang-bintang petunjuk, dan para imam umatnya yang mengikuti jejak beliau. Ya Allah, limpahkanlah salam kepada mereka semua dengan sempurna. Karena semuanya adalah milik-Mu, dan hanya Engkaulah Yang Maha Memiliki. Aku bersaksi bahwa tidak ada tuhan yang berhak disembah kecuali Allah, Yang Maha Esa tidak ada sekutu bagi-Nya. Dan aku bersaksi bahwa Nabi Muhammad adalah nabinya dan rasulnya, sebaik-baik nabi yang pernah diutus.",
+          "notes": [
+            "Teks ini merupakan doa pembuka dari kitab Afdhalush Shalawat yang bertubi-tubi memohon sholawat kepada Nabi Muhammad SAW.",
+            "Kalimat 'تقدم الأمراء على السلطان' secara tekstual berarti 'para amir mendahului sultan', merupakan ungkapan kiasan arab klasik tentang keutamaan.",
+            "Frase 'الكل مملوك وأنت وحدك المالك' mempertahankan kontras antara kepemilikan hamba dan kepemilikan mutlak Allah."
+          ],
+          "warnings": [
+            "Kata 'الإسلام' ( Islam ) di sini merujuk pada Islam sebagai nikmat dan karunia ilahi, bukan sebatas nama agama."
+          ]
+        },
+        {
+          "model": "qwen/qwen3.6-flash",
+          "ok": true,
+          "latency_seconds": 53.565,
+          "translation": "Segala puji bagi Allah, Tuhan semesta alam. Pujian yang menyatu dengan hikmah-Nya yang sempurna, dan meliputi segala nikmat-Nya yang melimpah, serta mengkhususkan nikmat-Nya kepadaku dengan iman dan Islam, karena keduanya adalah nikmat-Nya yang paling agung. Dan karena telah menjadikan aku termasuk umat Nabi kita Muhammad, sebaik-baik manusia, serta menjadikan umatnya sebagai umat terbaik. Sebagaimana aku memuji-Nya karena Dia sendiri beserta para malaikat-Nya bershalawat kepada Nabi mulia ini, dan memerintahkan orang-orang beriman untuk melakukannya sebagai penghormatan dan pengagungan kepadanya, maka berfirmanlah Dia Yang Maha Tinggi: \"Sesungguhnya Allah dan para malaikat-Nya bershalawat kepada Nabi. Wahai orang-orang yang beriman! Bershalawatlah kamu kepada Nabi dan ucapkanlah salam penghormatan kepadanya.\" Ya Allah, limpahkanlah shalawat kepada beliau dan kepada keluarga beliau, berupa shalawat terbaik yang pernah Engkau limpahkan atau akan Engkau limpahkan kepada salah seorang hamba-Mu yang saleh dan dekat (kepada-Mu), sehingga shalawat-Mu kepada Nabi kita Ibrahim dan keluarganya, meskipun dalam kesempurnaannya jika dibandingkan dengannya, bagaikan sebutir debu dibandingkan seluruh alam semesta. Dan kepada saudara-saudara beliau dari kalangan para nabi yang mendahuluinya dari segi waktu, yang kedudukannya bagaikan para amir terhadap sultan, serta para sahabat beliau yang menjadi bintang-bintang petunjuk, imam-imam umatnya, dan tempat meneladani mereka. Limpahkanlah keselamatan kepada mereka, ya Allah, dengan keselamatan yang serupa itu pula. Karena semuanya adalah hamba yang dimiliki, sedangkan Engkaulah satu-satunya Pemilik. Dan aku bersaksi bahwa tiada tuhan selain Allah, Yang Maha Esa, tidak ada sekutu bagi-Nya. Dan aku bersaksi bahwa Nabi kita Muhammad adalah utusan dan rasul-Nya, sebaik-baik nabi yang pernah Diutus-Nya.",
+          "notes": [],
+          "warnings": []
+        }
+      ]
+    }
+  ]
+}

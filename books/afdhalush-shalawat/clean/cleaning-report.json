@@ -1,0 +1,54 @@
+{
+  "source": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat/manuscript.md",
+  "profile": {
+    "name": "afdhalush-shalawat",
+    "rules": [
+      "fix_legacy_print_markers"
+    ],
+    "description": "Fix legacy print markers around bibliographic title lists."
+  },
+  "lines": 5480,
+  "changes": {
+    "common_particle_joined": 148,
+    "diacritic_joined": 0,
+    "fix_legacy_print_markers": 4,
+    "paren_spacing_fixed": 90,
+    "punctuation_spacing_fixed": 0,
+    "spaces_collapsed": 0,
+    "stars_replaced": 62,
+    "tatweel_removed": 529
+  },
+  "suspicious_samples": [
+    {
+      "line": 39,
+      "passage_id": "ASH-00009",
+      "pattern": "brace_marker",
+      "text": "الحمد للّٰه رب العالمين حمداً يقترن بحكمته البالغة، ويحيط بنعمه السابغة، ويخص نعمته عليّ بالإيمان والإسلام فإنها أعظم نعمه، وأن جعلني من أمة سيدنا محمد خير الأنام وجعلها خير أمّة، كما أحمده على أن صلّى هو وملائكته على هذ"
+    },
+    {
+      "line": 42,
+      "passage_id": "ASH-00010",
+      "pattern": "brace_marker",
+      "text": ")أما بعد(فيقول الفقير المذنب يوسف بن إسماعيل النبهاني إني تفكرت في كثرة ذنوبي وقلة أعمالي الصالحة فعظم بذلك بلائي، وغلب خوفي على رجائي، ثم ألهمني اللّٰه سبحانه أن لا دواء لهذا الداء، أنفع من صدق الالتجاء، إلى سيد المرسلي"
+    },
+    {
+      "line": 489,
+      "passage_id": "ASH-00153",
+      "pattern": "brace_marker",
+      "text": "قال وسيأتي أن الصلاة على النبي صلى اللّٰه عليه وسلم تكسب الأزواج والقصور ويأتي في الحديث أنها تعدل عتق الرقاب ا.ه. ونقل الشيخ عن بعض العارفين أن من كان شأنه كثرة الصلاة على النبي صلى اللّٰه عليه وسلم يحصل له الشرف الأكبر"
+    },
+    {
+      "line": 521,
+      "passage_id": "ASH-00161",
+      "pattern": "brace_marker",
+      "text": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ النَّبِيِّ الأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ وَأَزْوَاجِهِ أُمَّ هَاتِ الْمُؤْمِنِينَ وَذُرِّيَّتِهِ وَأَهْلِ بَيْتِهِ كَمَا صَلَّيْتَ عَلَى إِ بْرَاهِيمَوَعَلَى آلِ إ"
+    },
+    {
+      "line": 5480,
+      "passage_id": "ASH-01768",
+      "pattern": "brace_marker",
+      "text": "غضب اللّٰه }إنها لا تعمى الأبصار ولكن تعمى القلوب التي في الصدور { وحينئذٍ يجب على الحكومة إخراج أولئك المساكين رغماًعن أوليائهم الذين هم أصل بلائهم ووضعهم في مدارسها الكافلة بتعليمهم وتهذيبهم وتدريبهم وتأديبهم مع السلام"
+    }
+  ],
+  "book_id": "afdhalush-shalawat"
+}

@@ -1,1 +1,43 @@
-# surau-book
+# Surau Book
+
+Pipeline eksperimen untuk mengubah PDF kitab/turath menjadi sumber data yang
+lebih fleksibel: manuscript canonical, passage JSONL, Typst print edition,
+semantic annotation, translation draft, QA report, dan citation/page-map.
+
+## Struktur Utama
+
+- `sources/pdfs/`: PDF sumber sebagai raw material.
+- `books/*/raw/`: hasil ekstraksi mentah.
+- `books/*/clean/`: manuscript hasil cleaning non-destruktif.
+- `books/*/passages.jsonl`: passage canonical untuk API, RAG, graph, dan citation.
+- `books/*/annotations/`: semantic annotation draft dan LLM proposal.
+- `books/*/editions/`: output Typst/PDF dan page-map tiap edition.
+- `layouts/surau-arabic-book/`: template Typst reusable.
+- `scripts/`: extraction, cleaning, Typst build, page-map, QA, translation, enrichment.
+- `reports/`: QA, translation review, semantic enrichment, layout QA.
+
+## Workflow Singkat
+
+```sh
+python3 scripts/clean_manuscript.py --book-dir books/afdhalush-shalawat
+python3 scripts/build_semantic_annotations.py --book-dir books/afdhalush-shalawat
+python3 scripts/build_typst_edition.py \
+  --book-dir books/afdhalush-shalawat \
+  --edition surau-v1-enhanced \
+  --manuscript clean/manuscript.md \
+  --style enhanced-compact \
+  --annotations annotations/semantic-draft.jsonl
+typst compile --font-path assets/fonts/quran/hafs \
+  books/afdhalush-shalawat/editions/surau-v1-enhanced/book.typ \
+  books/afdhalush-shalawat/editions/surau-v1-enhanced/output.pdf
+python3 scripts/build_page_map.py \
+  --book-dir books/afdhalush-shalawat \
+  --edition surau-v1-enhanced \
+  --font-path assets/fonts/quran/hafs
+python3 scripts/qa_report.py
+```
+
+## Catatan
+
+Credential LLM tidak disimpan di repo. Gunakan environment variable seperti
+`KILO_API_KEY` ketika menjalankan translation atau semantic enrichment.

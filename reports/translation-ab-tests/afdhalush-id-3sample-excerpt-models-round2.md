@@ -1,0 +1,106 @@
+# Translation A/B Test
+
+- Started: `2026-05-07T09:54:30.926579+00:00`
+- Language: `id`
+- Models: `openai/gpt-5.4-mini, google/gemini-3.1-flash-lite-preview, x-ai/grok-4.3`
+- Samples: `ASH-00008, ASH-00009, ASH-00367`
+- Text overlay count: `365`
+
+## ASH-00008
+
+- Citation: Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00008.
+- Source length: `24`
+- Truncated: `False`
+
+### Source Preview
+
+بسم اللّٰه الرحمن الرحيم
+
+### Results
+
+#### openai/gpt-5.4-mini (ok, 1.469s)
+
+Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.
+
+- Notes: `[]`
+- Warnings: `[]`
+
+#### google/gemini-3.1-flash-lite-preview (ok, 1.288s)
+
+Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang.
+
+- Notes: `[]`
+- Warnings: `[]`
+
+#### x-ai/grok-4.3 (ok, 10.579s)
+
+Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.
+
+- Notes: `[]`
+- Warnings: `[]`
+
+## ASH-00009
+
+- Citation: Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00009.
+- Source length: `868`
+- Truncated: `False`
+
+### Source Preview
+
+الحمد للّٰه رب العالمين حمداً يقترن بحكمته البالغة، ويحيط بنعمه السابغة، ويخص نعمته عليّ بالإيمان والإسلام فإنها أعظم نعمه، وأن جعلني من أمة سيدنا محمد خير الأنام وجعلها خير أمّة، كما أحمده على أن صلّى هو وملائكته على هذا النبي الكريم وأمر المؤمنين بذلك تشريفاًله وتعظيماً، فقال تعالى:} إنَّ اللّٰه وَمَلاَئِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّ هَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمَا {، اللهم صلِّ عليه وعلى آله أفضل صلاة صليتها أو تصليها على أحد من عبادك الأبرار والمقربين، تكون صلاتك على سيدنا إبراهيم وآله مع كمالها بالنسبة إليها كالذرة بالنسبة إلى جميع العالمين، وعلى إخوانه الأنبياء الذين تقدموه في الزمان، تقدم الأمراء على السلطان، وأصحابه نجوم الهدى، وأئمة أمته ومن بهم اقتدى، وسلم اللهم عليهم تسليماًكذلك، فالكل مملوك وأنت وحدك المالك، وأشهد أن لا إله إلا اللّٰه وحده لا شريك له، وأشهد أن سيدنا محمداًنبيّه ورسوله خير نبيّ أرسله،
+
+### Results
+
+#### openai/gpt-5.4-mini (ok, 7.151s)
+
+Segala puji bagi Allah, Tuhan semesta alam, dengan pujian yang menyertai hikmah-Nya yang mencapai puncak, meliputi nikmat-Nya yang melimpah, dan mengkhususkan nikmat-Nya kepadaku berupa iman dan Islam; sebab itu adalah nikmat-Nya yang paling agung. Dan karena Dia menjadikan aku termasuk umat Sayyiduna Muhammad, sebaik-baik makhluk, dan menjadikannya sebaik-baik umat. Sebagaimana aku memuji-Nya atas bahwa Dia dan para malaikat-Nya bershalawat atas Nabi yang mulia ini, dan memerintahkan orang-orang beriman untuk ذلك sebagai penghormatan dan pengagungan kepadanya, maka Dia تعالى berfirman: {Sesungguhnya Allah dan para malaikat-Nya bershalawat kepada Nabi. Wahai orang-orang yang beriman, bershalawatlah kalian kepadanya dan ucapkanlah salam dengan penuh penghormatan}. Ya Allah, limpahkanlah shalawat kepada beliau dan kepada keluarganya dengan shalawat yang paling utama yang Engkau pernah limpahkan atau akan Engkau limpahkan kepada salah seorang dari hamba-hamba-Mu yang berbakti dan yang didekatkan; jadikanlah shalawat-Mu atas Sayyiduna Ibrahim dan keluarganya, dengan kesempurnaannya dibandingkan dengan shalawat itu, seperti ذرة نسبت إلى جميع العالمين; dan kepada saudara-saudaranya para nabi yang telah mendahuluinya dalam زمان, sebagaimana para amir mendahului السلطان, serta kepada para sahabatnya, bintang-bintang petunjuk, para imam umatnya dan orang-orang yang mengikuti mereka; dan limpahkanlah salam, ya Allah, kepada mereka dengan salam yang demikian juga. Maka semuanya adalah milik, sedangkan Engkau semata adalah Al-Malik. Dan aku bersaksi bahwa tiada ilah selain Allah, Yang Maha Esa, tiada sekutu bagi-Nya. Dan aku bersaksi bahwa Sayyiduna Muhammad adalah Nabi-Nya dan Rasul-Nya, sebaik-baik nabi yang diutus-Nya,
+
+- Notes: `["Bagian penutup kalimat pada teks Arab terpotong setelah kata: «خير نبيّ أرسله».", "Istilah dan frasa tertentu dipertahankan sebagian dalam bentuk Arab/istilah baku agar makna salawat dan pujian tetap terjaga."]`
+- Warnings: `["Kalimat Arab memuat beberapa susunan yang tampak tidak baku atau kemungkinan salah cetak, seperti «بحكمته البالغة» dan «كذلك»; terjemahan mengikuti makna lahiriah yang paling dekat."]`
+
+#### google/gemini-3.1-flash-lite-preview (ok, 3.091s)
+
+Segala puji bagi Allah, Tuhan semesta alam, dengan pujian yang beriringan dengan hikmah-Nya yang mendalam, yang meliputi segala nikmat-Nya yang melimpah, dan yang mengkhususkan nikmat-Nya kepadaku berupa iman dan Islam, karena sesungguhnya itu adalah nikmat-Nya yang paling agung. Dan (puji bagi-Nya) karena telah menjadikanku bagian dari umat Sayyidina Muhammad, sebaik-baik manusia, dan menjadikan umatnya sebagai sebaik-baik umat. Sebagaimana aku memuji-Nya karena Dia dan para malaikat-Nya bershalawat kepada Nabi yang mulia ini, dan Dia memerintahkan orang-orang mukmin untuk melakukan hal tersebut sebagai bentuk pemuliaan dan pengagungan kepadanya. Allah Ta'ala berfirman: 'Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat untuk Nabi. Hai orang-orang yang beriman, bershalawatlah kamu untuk Nabi dan ucapkanlah salam penghormatan kepadanya.' Ya Allah, limpahkanlah shalawat kepadanya dan kepada keluarganya dengan shalawat terbaik yang pernah Engkau limpahkan atau akan Engkau limpahkan kepada salah seorang hamba-Mu yang berbakti dan didekatkan kepada-Mu, yang mana shalawat-Mu kepada Sayyidina Ibrahim dan keluarganya—meskipun sempurna—bagaikan debu jika dibandingkan dengan shalawat tersebut bagi seluruh alam. Dan (limpahkanlah pula) kepada saudara-saudaranya para nabi yang mendahuluinya dalam waktu, sebagaimana para amir mendahului sultan, serta kepada para sahabatnya yang merupakan bintang-bintang petunjuk, para imam umatnya, dan orang-orang yang meneladani mereka. Dan limpahkanlah pula salam, ya Allah, kepada mereka dengan salam yang serupa. Sebab, semuanya adalah hamba dan Engkau semata yang Maha Memiliki. Aku bersaksi bahwa tiada tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya, dan aku bersaksi bahwa Sayyidina Muhammad adalah nabi dan rasul-Nya, sebaik-baik nabi yang diutus-Nya.
+
+- Notes: `["Terjemahan ini mempertahankan istilah 'Sayyidina' sebagai bentuk penghormatan yang lazim dalam tradisi pesantren.", "Frasa 'sebaik-baik manusia' digunakan untuk menerjemahkan 'khairul anam'."]`
+- Warnings: `[]`
+
+#### x-ai/grok-4.3 (ok, 52.509s)
+
+Segala puji bagi Allah Tuhan semesta alam dengan pujian yang menyatu dengan hikmah-Nya yang sempurna, dan meliputi nikmat-nikmat-Nya yang melimpah, serta mengkhususkan nikmat-Nya kepadaku dengan iman dan Islam karena sesungguhnya itulah nikmat-Nya yang terbesar, dan bahwa Dia menjadikanku dari umat Sayyidina Muhammad sebaik-baik makhluk dan menjadikannya sebaik-baik umat. Sebagaimana aku memuji-Nya atas shalawat yang telah Dia dan malaikat-malaikat-Nya berikan kepada Nabi yang mulia ini dan memerintahkan orang-orang beriman untuk itu sebagai penghormatan dan pengagungan baginya, maka Allah Ta'ala berfirman: "Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat kepada Nabi. Hai orang-orang yang beriman, bershalawatlah kamu kepadanya dan ucapkanlah salam penghormatan kepadanya." Ya Allah, bershalawatlah atasnya dan atas keluarganya dengan shalawat yang paling utama yang telah Engkau berikan atau akan Engkau berikan kepada salah seorang hamba-Mu yang baik dan didekatkan, yang shalawat-Mu atas Sayyidina Ibrahim dan keluarganya beserta kesempurnaannya jika dibandingkan dengannya adalah seperti zarrah dibandingkan dengan seluruh alam semesta, dan atas saudara-saudaranya para nabi yang mendahuluinya dalam zaman dengan mendahului para amir atas sultan, dan para sahabatnya bintang-bintang petunjuk, serta imam-imam umatnya dan orang-orang yang meneladani mereka. Dan semoga Allah memberi salam atas mereka dengan salam yang serupa, maka semuanya adalah hamba yang dimiliki dan Engkau semata Maha Pemilik. Dan aku bersaksi bahwa tidak ada Tuhan kecuali Allah semata tiada sekutu bagi-Nya, dan aku bersaksi bahwa Sayyidina Muhammad adalah nabi dan rasul-Nya, sebaik-baik nabi yang telah Dia utus.
+
+- Notes: `[]`
+- Warnings: `[]`
+
+## ASH-00367
+
+- Citation: Afdhalush Shalawat, ed. surau-v0, hlm. 71, ASH-00367.
+- Source length: `1199`
+- Truncated: `True`
+
+### Source Preview
+
+تَمْحُوَ عَنَّا وُجُودَ ذُنُوبِنَا بِمُشَاهَدَةِ جَمَالِكَ وَتُغَيِّبَنَا عَنَّا فِي بِ حَارِ أَنْوَارِكَ مَعْصُومِينَ مِنَ الْشَّ وَاغِلِ الدُّ نْيَوِيَّةِ رَاغِبِينَ إِ لَيْكَ غَائِبِېنَ بِكَ يَا هُوَ يَا اللّٰه يَا هُوَ يَا اللّٰه يَا هُوَ يَا اللّٰه لاَإِ لَهَغَيْرُكَ اسْقِنَا مِنْ شَرَابِ مَحَبَّتِكَ وَاغْمِسْنَا فِي بِ حَارِ أَحَدِيَّتِكَ حَتَّى نَرْتَعَ فِي بُحْبُوحَةِ حَضْرَتِكَ وَتَقطَعَ عَنَّا أَوْهَامَ خَلِيقَتِكَ بِفَضْ لِكَ وَرَحْمَتِكَ وَنَوِّرْنَا بِنُورِ طَاعَتِكَ وَاهْدِنَا وَلاَتُضِلَّنَا وَبَصِّرْنَا بِعُيُوبِنَا عَنْ عُيُوبِ غَيْرِنَا بِ حُرْمَةِ نَبِيِّنَا وَسَيِّدِنَا مُحَمَّدٍ صَلَّى اللّٰه عَلَيْهِ وَسَلَّمَ وَعَلَى آلِهِ وَأَصْ حَابِهِ مَصَابِيحِ الْوُجُودِ وَأَهْلِ الشُّهُودِ يَا أَرْحَمَ الرَّاحِمِينَ نَسْأَلُكَ أَنْ تُلْحِقَنَا بِهِمْ وَتَمْنَحَنَا حُبَّ هُمْ يَا اللّٰه يَا حَيُّ يَا قَيُّومُ يَا ذَا الْجَلاَلِ وَالإِ كْرَامِ رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّ مِيعُ الْعَلِيمُوَتُبْ عَلَيْنَا إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُوَهَبْ لَنَا مَعْرِفَةً نَافِعَةً إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ يَا رَبَّ الْعَالَمِينَ يَا رَحْمَنُ يَا رَحِيمُنَسْأَلُكَ أَنْ تَرْزُقَنَا رُؤْيَةَوَجْهِ نَبِيِّنَا فِي مَنَامِنَا وَيَقْظَتِنَا وَأَنْ تُصَلِّيَ
+
+### Results
+
+#### openai/gpt-5.4-mini (ok, 5.328s)
+
+Engkau menghapus keberadaan dosa-dosa kami dengan menyaksikan keindahan-Mu, dan Engkau meniadakan kami dari kami di dalam lautan cahaya-Mu, dalam keadaan terpelihara dari kesibukan-kesibukan duniawi, rindu kepada-Mu, lenyap bersama-Mu. Wahai Dia, wahai Allah, wahai Dia, wahai Allah, wahai Dia, wahai Allah. Tiada tuhan selain Engkau. Berilah kami minum dari minuman cinta-Mu, dan tenggelamkanlah kami di dalam lautan keesaan-Mu hingga kami bersenang-senang di tengah-tengah hadirat-Mu, dan putuskanlah dari kami khayalan-khayalan makhluk-Mu dengan karunia dan rahmat-Mu, dan terangi kami dengan cahaya ketaatan kepada-Mu, dan berilah kami petunjuk serta janganlah Engkau menyesatkan kami, dan perlihatkanlah kepada kami aib-aib kami dari aib-aib selain kami, dengan kehormatan Nabi kami dan سيدنا Muhammad صلى الله عليه وسلم serta keluarga dan para sahabat beliau, pelita-pelita wujud dan أهل الشهود. Wahai Yang Maha Penyayang di antara para penyayang, kami memohon kepada-Mu agar Engkau menggabungkan kami dengan mereka dan menganugerahkan kepada kami cinta mereka. Wahai Allah, wahai Yang Maha Hidup, wahai Yang Maha Berdiri Sendiri, wahai Pemilik Keagungan dan Kemuliaan. Ya Tuhan kami, terimalah dari kami; sesungguhnya Engkaulah Yang Maha Mendengar lagi Maha Mengetahui. Dan terimalah tobat kami; sesungguhnya Engkaulah Yang Maha Penerima tobat lagi Maha Penyayang. Dan karuniakanlah kepada kami pengetahuan yang bermanfaat; sesungguhnya Engkau Maha Kuasa atas segala sesuatu. Wahai Tuhan semesta alam, wahai Yang Maha Pengasih, wahai Yang Maha Penyayang. Kami memohon kepada-Mu agar Engkau menganugerahkan kepada kami رؤية وجه Nabi kami dalam tidur kami dan dalam keadaan terjaga kami, dan agar Engkau bershalawat...
+
+- Notes: `[]`
+- Warnings: `["Teks Arab sumber tampak memiliki beberapa ketidakteraturan/typo dan bagian akhir terpotong pada kata 'وَأَنْ تُصَلِّيَ'."]`
+
+#### google/gemini-3.1-flash-lite-preview (ok, 4.406s)
+
+Hapuskanlah dari kami wujud dosa-dosa kami dengan menyaksikan keindahan-Mu, dan hilangkanlah kesadaran diri kami di dalam samudera cahaya-Mu, dalam keadaan terjaga dari kesibukan duniawi, senantiasa berharap kepada-Mu, tenggelam dalam diri-Mu. Ya Hu, ya Allah, ya Hu, ya Allah, ya Hu, ya Allah, tiada Tuhan selain Engkau. Berilah kami minum dari minuman cinta-Mu, dan celupkanlah kami ke dalam samudera keesaan-Mu (ahadiyah), hingga kami dapat bersenang-senang di tengah keluasan hadirat-Mu, dan putuskanlah dari kami segala prasangka terhadap makhluk-Mu dengan karunia dan rahmat-Mu. Terangilah kami dengan cahaya ketaatan kepada-Mu, berilah kami petunjuk dan jangan Engkau sesatkan kami, serta bukakanlah mata kami terhadap aib-aib kami sendiri sehingga kami tidak melihat aib orang lain, demi kehormatan Nabi kami dan junjungan kami Muhammad shallallahu 'alaihi wa sallam, serta keluarga dan para sahabatnya, pelita-pelita wujud dan ahli syuhud. Wahai Yang Maha Pengasih di antara para pengasih, kami memohon kepada-Mu agar Engkau mengumpulkan kami bersama mereka dan menganugerahkan kepada kami kecintaan kepada mereka. Ya Allah, ya Hayyu, ya Qayyum, ya Dzal Jalali wal Ikram. Wahai Tuhan kami, terimalah dari kami, sesungguhnya Engkau Maha Mendengar lagi Maha Mengetahui. Terimalah taubat kami, sesungguhnya Engkau Maha Penerima taubat lagi Maha Penyayang. Anugerahkanlah kepada kami makrifat yang bermanfaat, sesungguhnya Engkau Maha Kuasa atas segala sesuatu. Wahai Tuhan semesta alam, wahai Yang Maha Pengasih, wahai Yang Maha Penyayang, kami memohon kepada-Mu agar Engkau mengaruniakan kepada kami kesempatan melihat wajah Nabi kami dalam tidur maupun terjaga, dan agar Engkau melimpahkan shalawat.
+
+- Notes: `["Istilah 'ahadiyah' merujuk pada keesaan mutlak Allah SWT dalam terminologi tasawuf.", "Istilah 'ahli syuhud' merujuk pada mereka yang senantiasa menyaksikan keagungan Allah dalam segala hal."]`
+- Warnings: `[]`
+
+#### x-ai/grok-4.3 (ok, 51.804s)
+
+agar Engkau menghapus keberadaan dosa-dosa kami dengan menyaksikan keindahan-Mu dan menjadikan kami lenyap dari diri kami dalam lautan cahaya-cahaya-Mu, terpelihara dari segala kesibukan duniawi, rindu kepada-Mu, lenyap dalam-Mu. Ya Huwa ya Allah, ya Huwa ya Allah, ya Huwa ya Allah. Tiada tuhan selain Engkau. Berilah kami minum dari minuman cinta-Mu dan celupkanlah kami ke dalam lautan keesaan-Mu sehingga kami bersenang-senang di dalam kelapangan hadirat-Mu dan Engkau putuskan daripada kami segala khayalan makhluk-Mu dengan karunia dan rahmat-Mu. Dan terangilah kami dengan cahaya ketaatan kepada-Mu, tunjukilah kami dan janganlah Engkau sesatkan kami, serta perlihatkanlah kepada kami aib-aib kami bukan aib orang lain, dengan kemuliaan Nabi kami dan pemimpin kami Muhammad shallallahu alaihi wasallam beserta keluarga dan sahabat-sahabatnya yang merupakan pelita-pelita wujud dan ahli penyaksian. Ya Arhamar Rahimin, kami memohon kepada-Mu agar Engkau pertemukan kami dengan mereka dan anugerahkan kami cinta kepada mereka. Ya Allah, ya Hayyu ya Qayyum, ya Dzal Jalali wal Ikram. Tuhan kami, terimalah (amalan) dari kami, sesungguhnya Engkau Maha Mendengar lagi Maha Mengetahui. Dan terimalah taubat kami, sesungguhnya Engkau Maha Penerima Taubat lagi Maha Penyayang. Dan berilah kami pengetahuan yang bermanfaat, sesungguhnya Engkau Mahakuasa atas segala sesuatu. Ya Tuhan semesta alam, ya Rahman, ya Rahim. Kami memohon kepada-Mu agar Engkau rezekikan kami untuk melihat wajah Nabi kami dalam tidur dan jaga kami serta agar Engkau bershalawat
+
+- Notes: `[]`
+- Warnings: `["Teks sumber tampak tidak lengkap di bagian akhir."]`

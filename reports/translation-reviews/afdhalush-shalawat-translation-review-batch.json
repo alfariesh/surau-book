@@ -1,0 +1,721 @@
+{
+  "schema_version": 0.1,
+  "book_id": "afdhalush-shalawat",
+  "book_dir": "books/afdhalush-shalawat",
+  "source": "books/afdhalush-shalawat/passages.jsonl",
+  "langs": [
+    "id",
+    "en"
+  ],
+  "count": 20,
+  "ids": [
+    "ASH-00003",
+    "ASH-00008",
+    "ASH-00009",
+    "ASH-00010",
+    "ASH-00012",
+    "ASH-00013",
+    "ASH-00029",
+    "ASH-00109",
+    "ASH-00238",
+    "ASH-00381",
+    "ASH-00367",
+    "ASH-00266",
+    "ASH-00361",
+    "ASH-00222",
+    "ASH-00443",
+    "ASH-00664",
+    "ASH-00885",
+    "ASH-01106",
+    "ASH-01327",
+    "ASH-01548"
+  ],
+  "missing_by_lang": {
+    "id": [
+      "ASH-00003",
+      "ASH-00009",
+      "ASH-00010",
+      "ASH-00012",
+      "ASH-00013",
+      "ASH-00029",
+      "ASH-00109",
+      "ASH-00238",
+      "ASH-00381",
+      "ASH-00367",
+      "ASH-00266",
+      "ASH-00361",
+      "ASH-00222",
+      "ASH-00443",
+      "ASH-00664",
+      "ASH-00885",
+      "ASH-01106",
+      "ASH-01327",
+      "ASH-01548"
+    ],
+    "en": [
+      "ASH-00003",
+      "ASH-00009",
+      "ASH-00010",
+      "ASH-00012",
+      "ASH-00013",
+      "ASH-00029",
+      "ASH-00109",
+      "ASH-00238",
+      "ASH-00381",
+      "ASH-00367",
+      "ASH-00266",
+      "ASH-00361",
+      "ASH-00222",
+      "ASH-00443",
+      "ASH-00664",
+      "ASH-00885",
+      "ASH-01106",
+      "ASH-01327",
+      "ASH-01548"
+    ]
+  },
+  "items": [
+    {
+      "id": "ASH-00003",
+      "sequence": 3,
+      "section_path": [
+        "عن المؤلف"
+      ],
+      "source_page": 6,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 5, ASH-00003.",
+      "source_length": 174,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "author_context"
+      ],
+      "reasons": [
+        "author/context prose"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00008",
+      "sequence": 8,
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00008.",
+      "source_length": 24,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "already_translated",
+        "basmalah"
+      ],
+      "reasons": [
+        "has an existing translation row",
+        "standard devotional opening"
+      ],
+      "translations": {
+        "id": {
+          "status": "machine_draft",
+          "model": "google/gemini-3.1-flash-lite-preview",
+          "target_len": 66,
+          "ratio": 2.75,
+          "arabic_leak": 0,
+          "warnings": [],
+          "notes": []
+        },
+        "en": {
+          "status": "machine_draft",
+          "model": "deepseek-v4-pro",
+          "target_len": 59,
+          "ratio": 2.46,
+          "arabic_leak": 0,
+          "warnings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "id": "ASH-00009",
+      "sequence": 9,
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00009.",
+      "source_length": 868,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "muqaddimah_long"
+      ],
+      "reasons": [
+        "long opening prose"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00010",
+      "sequence": 10,
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00010.",
+      "source_length": 544,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "salawat_short"
+      ],
+      "reasons": [
+        "short salawat formula"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00012",
+      "sequence": 12,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 7, ASH-00012.",
+      "source_length": 1410,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "hadith_discussion"
+      ],
+      "reasons": [
+        "report/transmission prose"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00013",
+      "sequence": 13,
+      "section_path": [
+        "القسم الأول"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 8, ASH-00013.",
+      "source_length": 33,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "heading_like"
+      ],
+      "reasons": [
+        "heading-like short passage"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00029",
+      "sequence": 29,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي"
+      ],
+      "source_page": 11,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 11, ASH-00029.",
+      "source_length": 2985,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "salawat_long"
+      ],
+      "reasons": [
+        "long salawat/du'a formula"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00109",
+      "sequence": 109,
+      "section_path": [
+        "القسم الأول",
+        "الفصل السابع في بيان الفوائد الجمة والمنافع المهمة التي تحصل في الدنيا والآخرة لمن يصلى عليه صلى الله عليه وسلم"
+      ],
+      "source_page": 23,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 23, ASH-00109.",
+      "source_length": 160,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "benefit_list"
+      ],
+      "reasons": [
+        "enumerated benefit list"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00238",
+      "sequence": 238,
+      "section_path": [
+        "القسم الثاني",
+        "الصلاة السابعة والثلاثون"
+      ],
+      "source_page": 41,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 41, ASH-00238.",
+      "source_length": 7,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "short_edge"
+      ],
+      "reasons": [
+        "very short passage edge case"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00381",
+      "sequence": 381,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الأولى"
+      ],
+      "source_page": 76,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 77, ASH-00381.",
+      "source_length": 85,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "poetry"
+      ],
+      "reasons": [
+        "poetry/qasidah section"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00367",
+      "sequence": 367,
+      "section_path": [
+        "القسم الثاني",
+        "الصلاة التاسعة والستون"
+      ],
+      "source_page": 71,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 71, ASH-00367.",
+      "source_length": 8054,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "longest_1"
+      ],
+      "reasons": [
+        "one of the longest source passages"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00266",
+      "sequence": 266,
+      "section_path": [
+        "القسم الثاني",
+        "الصلاة الثانية والأربعون"
+      ],
+      "source_page": 46,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 47, ASH-00266.",
+      "source_length": 4165,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "longest_2"
+      ],
+      "reasons": [
+        "one of the longest source passages"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00361",
+      "sequence": 361,
+      "section_path": [
+        "القسم الثاني",
+        "الصلاة التاسعة والستون"
+      ],
+      "source_page": 68,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 69, ASH-00361.",
+      "source_length": 3982,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "longest_3"
+      ],
+      "reasons": [
+        "one of the longest source passages"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00222",
+      "sequence": 222,
+      "section_path": [
+        "القسم الثاني",
+        "الصلاة الثانية والثلاثون"
+      ],
+      "source_page": 38,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 38, ASH-00222.",
+      "source_length": 347,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00443",
+      "sequence": 443,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الأولى"
+      ],
+      "source_page": 78,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 78, ASH-00443.",
+      "source_length": 40,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00664",
+      "sequence": 664,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الثانية"
+      ],
+      "source_page": 86,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 83, ASH-00664.",
+      "source_length": 76,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00885",
+      "sequence": 885,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الثالثة"
+      ],
+      "source_page": 93,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 89, ASH-00885.",
+      "source_length": 76,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-01106",
+      "sequence": 1106,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الرابعة"
+      ],
+      "source_page": 101,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 94, ASH-01106.",
+      "source_length": 91,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-01327",
+      "sequence": 1327,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة الخامسة"
+      ],
+      "source_page": 108,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 100, ASH-01327.",
+      "source_length": 96,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-01548",
+      "sequence": 1548,
+      "section_path": [
+        "الخاتمة في سبع قصائد فرائد",
+        "القصيدة السادسة"
+      ],
+      "source_page": 115,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 105, ASH-01548.",
+      "source_length": 38,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "sequence_spread"
+      ],
+      "reasons": [
+        "fills the batch across the book sequence"
+      ],
+      "translations": {
+        "id": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    }
+  ]
+}

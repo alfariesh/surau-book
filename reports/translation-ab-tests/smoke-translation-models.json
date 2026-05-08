@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "started_at": "2026-05-07T09:09:59.271362+00:00",
+  "book_dir": "/Users/macmini/Documents/Surau-Database/books/afdhalush-shalawat",
+  "lang": "id",
+  "models": [
+    "z-ai/glm-5.1",
+    "deepseek-v4-pro",
+    "minimax/minimax-m2.7",
+    "qwen/qwen3.6-flash"
+  ],
+  "source_ids": [
+    "ASH-00008"
+  ],
+  "text_overlay_count": 365,
+  "samples": [
+    {
+      "id": "ASH-00008",
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00008.",
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_text_length": 24,
+      "source_text_preview": "بسم اللّٰه الرحمن الرحيم",
+      "results": [
+        {
+          "model": "z-ai/glm-5.1",
+          "ok": true,
+          "latency_seconds": 17.339,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ok": true,
+          "latency_seconds": 5.842,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "minimax/minimax-m2.7",
+          "ok": true,
+          "latency_seconds": 12.024,
+          "translation": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "model": "qwen/qwen3.6-flash",
+          "ok": true,
+          "latency_seconds": 5.177,
+          "translation": "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.",
+          "notes": [],
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "finished_at": "2026-05-07T09:10:39.654806+00:00"
+}

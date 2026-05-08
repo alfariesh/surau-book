@@ -1,0 +1,22 @@
+profiles:
+  default:
+    description: Conservative shared Arabic manuscript cleaning.
+    rules: []
+
+  afdhalush-shalawat:
+    description: Fix legacy print markers around bibliographic title lists.
+    rules:
+      - fix_legacy_print_markers
+
+  tafsir-jalalain:
+    description: Drop Shamela/runtime error lines from the source PDF text layer.
+    rules:
+      - drop_runtime_error_lines
+
+  syarh-ibni-aqil:
+    description: Keep only global rules for now; report syntax/footnote artifacts for manual review.
+    rules: []
+
+  tarikh-al-khulafa:
+    description: Keep only global rules for now; braces are usually Quranic citations and should not be removed.
+    rules: []

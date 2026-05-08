@@ -1,0 +1,19 @@
+schema_version: 0.1
+id: tafsir-jalalain
+title_ar: تفسير الجلالين
+title_id: Tafsir Jalalain
+author: المحلي
+language: ar
+canonical_language: ar
+status: draft_extraction
+heading_profile: quran-tafsir
+source:
+  pdf: sources/pdfs/TAFSIR-JALALAIN.pdf
+  pages: 1621
+outputs:
+  raw_json: raw/raw.json
+  raw_markdown: raw/raw.md
+  manuscript: manuscript.md
+  clean_manuscript: clean/manuscript.md
+  cleaning_report: clean/cleaning-report.json
+  passages: passages.jsonl

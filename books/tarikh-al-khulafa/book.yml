@@ -1,0 +1,19 @@
+schema_version: 0.1
+id: tarikh-al-khulafa
+title_ar: تاريخ الخلفاء - مطبعة السعادة
+title_id: Tarikh Al-Khulafa
+author: السيوطي
+language: ar
+canonical_language: ar
+status: draft_extraction
+heading_profile: biography
+source:
+  pdf: sources/pdfs/TARIKH AL-KHULAFA’.pdf
+  pages: 220
+outputs:
+  raw_json: raw/raw.json
+  raw_markdown: raw/raw.md
+  manuscript: manuscript.md
+  clean_manuscript: clean/manuscript.md
+  cleaning_report: clean/cleaning-report.json
+  passages: passages.jsonl
