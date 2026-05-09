@@ -11,6 +11,7 @@ semantic annotation, translation draft, QA report, dan citation/page-map.
 - `books/*/clean/`: manuscript hasil cleaning non-destruktif.
 - `books/*/passages.jsonl`: passage canonical untuk API, RAG, graph, dan citation.
 - `books/*/annotations/`: semantic annotation draft dan LLM proposal.
+- `books/*/assets/`: image briefs, reviewed/generated images, dan asset editorial.
 - `books/*/editions/`: output Typst/PDF dan page-map tiap edition.
 - `layouts/surau-arabic-book/`: template Typst reusable.
 - `scripts/`: extraction, cleaning, Typst build, page-map, QA, translation, enrichment.
@@ -45,6 +46,14 @@ python3 scripts/build_page_map.py \
   --edition surau-v1-enhanced \
   --font-path assets/fonts/quran/hafs
 python3 scripts/qa_report.py
+```
+
+Draft English prompts for chapter separator images:
+
+```sh
+python3 scripts/build_image_briefs.py \
+  --book-dir books/afdhalush-shalawat \
+  --levels 1,2
 ```
 
 ## Catatan

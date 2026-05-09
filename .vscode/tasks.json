@@ -396,6 +396,21 @@
       "problemMatcher": []
     },
     {
+      "label": "Surau Images: Afdhalush Briefs",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_image_briefs.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--levels",
+        "1,2",
+        "--aspect-ratio",
+        "16:9"
+      ],
+      "problemMatcher": []
+    },
+    {
       "label": "Surau QA: All Books",
       "type": "shell",
       "command": "python3",

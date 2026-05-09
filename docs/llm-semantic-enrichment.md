@@ -26,6 +26,10 @@ clean/manuscript.md
 - propose diagrams, tables, glossary entries, editor notes, cross-references, or illustrations
 - mark uncertain references as needing review
 
+Illustration proposals should become reviewable image briefs, not immediate
+image assets. See `docs/image-briefs.md` and
+`scripts/build_image_briefs.py`.
+
 ## What the LLM must not do
 
 - rewrite the canonical Arabic text

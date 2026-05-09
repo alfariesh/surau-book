@@ -33,6 +33,7 @@
       "annotations": "annotations/semantic-draft.jsonl",
       "reviewed_annotations": "annotations/semantic-reviewed.jsonl",
       "llm_proposals": "annotations/semantic-llm-proposals.jsonl",
+      "image_briefs": "assets/image-briefs.jsonl",
       "cleaning_report": "clean/cleaning-report.json",
       "passages": "passages.jsonl",
       "editions": {
