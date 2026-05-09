@@ -1,0 +1,695 @@
+openapi: 3.1.0
+info:
+  title: Surau Book API
+  version: "0.1"
+  description: Read-only API contract for Surau canonical kitab data.
+servers:
+  - url: /api/v0
+tags:
+  - name: Books
+  - name: Passages
+  - name: Translations
+  - name: Editions
+  - name: Search
+paths:
+  /books:
+    get:
+      tags: [Books]
+      summary: List books
+      parameters:
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+        - $ref: "#/components/parameters/Status"
+      responses:
+        "200":
+          description: Book list.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/BookSummary"
+  /books/{work_id}:
+    get:
+      tags: [Books]
+      summary: Get book metadata
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+      responses:
+        "200":
+          description: Book metadata.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/SingleEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        $ref: "#/components/schemas/Book"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /books/{work_id}/sections:
+    get:
+      tags: [Books]
+      summary: List book sections
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - name: level
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 6
+        - name: prefix
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: Section list.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Section"
+  /books/{work_id}/passages:
+    get:
+      tags: [Passages]
+      summary: List canonical passages
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/Lang"
+        - $ref: "#/components/parameters/Edition"
+        - $ref: "#/components/parameters/Include"
+        - $ref: "#/components/parameters/Status"
+        - name: section
+          in: query
+          schema:
+            type: string
+        - name: kind
+          in: query
+          schema:
+            type: string
+        - name: role
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: Passage list.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Passage"
+  /books/{work_id}/passages/{passage_id}:
+    get:
+      tags: [Passages]
+      summary: Get canonical passage
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/PassageId"
+        - $ref: "#/components/parameters/Lang"
+        - $ref: "#/components/parameters/Edition"
+        - $ref: "#/components/parameters/Include"
+      responses:
+        "200":
+          description: Passage.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/SingleEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        $ref: "#/components/schemas/Passage"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /books/{work_id}/passages/{passage_id}/citation:
+    get:
+      tags: [Passages]
+      summary: Get passage citation
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/PassageId"
+        - $ref: "#/components/parameters/Edition"
+      responses:
+        "200":
+          description: Passage citation.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/SingleEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: object
+                        required: [work_id, passage_id, citation]
+                        properties:
+                          work_id:
+                            type: string
+                          passage_id:
+                            type: string
+                          citation:
+                            $ref: "#/components/schemas/Citation"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /books/{work_id}/translations/{lang}/passages:
+    get:
+      tags: [Translations]
+      summary: List translations by source passage
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/LangPath"
+        - name: source_passage_id
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Status"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: Translation list.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Translation"
+  /books/{work_id}/translations/{lang}/passages/{passage_id}:
+    get:
+      tags: [Translations]
+      summary: Get translation by Arabic source passage ID
+      description: The passage_id path parameter is the Arabic source passage ID, not the translation row ID.
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/LangPath"
+        - $ref: "#/components/parameters/PassageId"
+      responses:
+        "200":
+          description: Translation.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/SingleEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        $ref: "#/components/schemas/Translation"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /books/{work_id}/editions:
+    get:
+      tags: [Editions]
+      summary: List editions
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+      responses:
+        "200":
+          description: Edition list.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Edition"
+  /books/{work_id}/editions/{edition_id}/pages/{page}:
+    get:
+      tags: [Editions]
+      summary: List passages that start on an edition page
+      parameters:
+        - $ref: "#/components/parameters/WorkId"
+        - $ref: "#/components/parameters/EditionId"
+        - name: page
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+        - $ref: "#/components/parameters/Include"
+      responses:
+        "200":
+          description: Edition page passages.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Passage"
+  /search:
+    get:
+      tags: [Search]
+      summary: Lexical search across passages
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: work_id
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Lang"
+        - name: kind
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: Search results.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ListEnvelope"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/SearchResult"
+components:
+  parameters:
+    WorkId:
+      name: work_id
+      in: path
+      required: true
+      schema:
+        type: string
+      example: afdhalush-shalawat
+    PassageId:
+      name: passage_id
+      in: path
+      required: true
+      schema:
+        type: string
+      example: ASH-00033
+    EditionId:
+      name: edition_id
+      in: path
+      required: true
+      schema:
+        type: string
+      example: surau-v0
+    Lang:
+      name: lang
+      in: query
+      schema:
+        type: string
+        default: ar
+      example: id
+    LangPath:
+      name: lang
+      in: path
+      required: true
+      schema:
+        type: string
+      example: id
+    Edition:
+      name: edition
+      in: query
+      schema:
+        type: string
+      example: surau-v0
+    Include:
+      name: include
+      in: query
+      description: Comma-separated expansions.
+      schema:
+        type: string
+      examples:
+        reader:
+          value: text,semantic,translation
+        internal:
+          value: text,semantic,edition_refs,source_audit
+    Status:
+      name: status
+      in: query
+      description: Comma-separated status filter.
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 50
+        minimum: 1
+        maximum: 200
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
+  responses:
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorEnvelope"
+  schemas:
+    SingleEnvelope:
+      type: object
+      required: [data, meta]
+      properties:
+        data: {}
+        meta:
+          $ref: "#/components/schemas/Meta"
+    ListEnvelope:
+      type: object
+      required: [data, page, meta]
+      properties:
+        data:
+          type: array
+          items: {}
+        page:
+          $ref: "#/components/schemas/PageInfo"
+        meta:
+          $ref: "#/components/schemas/Meta"
+    ErrorEnvelope:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code:
+              type: string
+              examples: [not_found]
+            message:
+              type: string
+            details:
+              type: object
+              additionalProperties: true
+    Meta:
+      type: object
+      required: [api_version]
+      properties:
+        api_version:
+          type: string
+          examples: ["0.1"]
+    PageInfo:
+      type: object
+      required: [limit]
+      properties:
+        limit:
+          type: integer
+        next_cursor:
+          type:
+            - string
+            - "null"
+    LocalizedTitle:
+      type: object
+      additionalProperties:
+        type: string
+      examples:
+        - ar: أفضل الصلوات على سيد السادات
+          id: Afdhalush Shalawat
+    BookSummary:
+      type: object
+      required: [id, title, canonical_lang, status, default_edition]
+      properties:
+        id:
+          type: string
+        title:
+          $ref: "#/components/schemas/LocalizedTitle"
+        canonical_lang:
+          type: string
+        status:
+          type: string
+        default_edition:
+          type: string
+    Book:
+      allOf:
+        - $ref: "#/components/schemas/BookSummary"
+        - type: object
+          properties:
+            author:
+              type: object
+              properties:
+                ar:
+                  type: string
+                display:
+                  type: string
+            working_edition:
+              type: string
+            source_policy:
+              type: string
+            counts:
+              type: object
+              additionalProperties: true
+    Passage:
+      type: object
+      required: [id, work_id, sequence, lang, section_path, status, citation]
+      properties:
+        id:
+          type: string
+        work_id:
+          type: string
+        sequence:
+          type: integer
+        lang:
+          type: string
+        section_path:
+          type: array
+          items:
+            type: string
+        text:
+          type: string
+        status:
+          $ref: "#/components/schemas/PassageStatus"
+        semantic:
+          $ref: "#/components/schemas/SemanticSummary"
+        citation:
+          $ref: "#/components/schemas/Citation"
+        viewer:
+          $ref: "#/components/schemas/Viewer"
+        translation:
+          $ref: "#/components/schemas/TranslationSummary"
+        edition_refs:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/EditionRef"
+        source_audit:
+          type: array
+          items:
+            $ref: "#/components/schemas/SourceBlock"
+    PassageStatus:
+      type: object
+      properties:
+        text:
+          type: string
+        semantic:
+          type: string
+    SemanticSummary:
+      type: object
+      properties:
+        kind:
+          type: string
+        role:
+          type: string
+        layout:
+          type: string
+        confidence:
+          type: number
+        segment_count:
+          type: integer
+        review_required:
+          type: boolean
+    Citation:
+      type: object
+      required: [label, edition_id, anchor_id]
+      properties:
+        label:
+          type: string
+        edition_id:
+          type: string
+        anchor_id:
+          type: string
+        locator:
+          type: object
+          properties:
+            type:
+              type: string
+            label:
+              type: string
+            page:
+              type: integer
+    Viewer:
+      type: object
+      properties:
+        edition_id:
+          type: string
+        pdf_page:
+          type: integer
+    EditionRef:
+      type: object
+      properties:
+        label:
+          type: string
+        page:
+          type: integer
+        physical_page:
+          type: integer
+        page_semantics:
+          type: string
+        viewer:
+          $ref: "#/components/schemas/Viewer"
+    SourceBlock:
+      type: object
+      properties:
+        pdf_page:
+          type: integer
+        block_id:
+          type: string
+        bbox:
+          type: array
+          items:
+            type: number
+    TranslationSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        lang:
+          type: string
+        status:
+          type: string
+        text:
+          type: string
+    Translation:
+      type: object
+      required: [id, work_id, lang, source_lang, source_passage_id, status, type, text]
+      properties:
+        id:
+          type: string
+        work_id:
+          type: string
+        lang:
+          type: string
+        source_lang:
+          type: string
+        source_passage_id:
+          type: string
+        status:
+          type: string
+        type:
+          type: string
+        translator:
+          type: string
+        model:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        warnings:
+          type: array
+          items:
+            type: string
+        source_citation:
+          $ref: "#/components/schemas/Citation"
+    Section:
+      type: object
+      required: [id, work_id, title, level, path, first_passage_id, passage_count]
+      properties:
+        id:
+          type: string
+        work_id:
+          type: string
+        title:
+          type: string
+        level:
+          type: integer
+        path:
+          type: array
+          items:
+            type: string
+        first_passage_id:
+          type: string
+        passage_count:
+          type: integer
+    Edition:
+      type: object
+      required: [id, work_id, status]
+      properties:
+        id:
+          type: string
+        work_id:
+          type: string
+        status:
+          type: string
+        pdf_url:
+          type: string
+        page_map_url:
+          type: string
+    SearchResult:
+      type: object
+      required: [work_id, passage_id, lang, snippet, citation]
+      properties:
+        work_id:
+          type: string
+        passage_id:
+          type: string
+        lang:
+          type: string
+        snippet:
+          type: string
+        score:
+          type: number
+        semantic_kind:
+          type: string
+        section_path:
+          type: array
+          items:
+            type: string
+        citation:
+          $ref: "#/components/schemas/Citation"

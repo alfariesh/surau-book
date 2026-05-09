@@ -16,6 +16,16 @@ semantic annotation, translation draft, QA report, dan citation/page-map.
 - `scripts/`: extraction, cleaning, Typst build, page-map, QA, translation, enrichment.
 - `reports/`: QA, translation review, semantic enrichment, layout QA.
 
+## API Contract
+
+- Human-readable contract: `docs/api-contract-v0.md`
+- Machine-readable OpenAPI: `api/openapi.v0.yaml`
+
+API v0 is read-only and should serve normalized data from `book.yml`,
+`passages.jsonl`, `annotations/semantic-reviewed.jsonl`,
+`translations/{lang}/passages.jsonl`, and edition page maps. Do not expose raw
+JSONL rows directly as public responses.
+
 ## Workflow Singkat
 
 ```sh
