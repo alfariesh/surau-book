@@ -1,0 +1,890 @@
+{
+  "schema_version": "0.1",
+  "book_dir": "books/afdhalush-shalawat",
+  "manuscript": "clean/manuscript.md",
+  "proposals": "books/afdhalush-shalawat/annotations/semantic-llm-proposals-batch-40.jsonl",
+  "status": "warn",
+  "source_passage_count": 1768,
+  "proposal_count": 40,
+  "source_overlay_count": 335,
+  "finding_counts": {
+    "warn": 48
+  },
+  "findings": [
+    {
+      "proposal_id": "ASH-00008",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "بسم اللّٰه الرحمن الرحيم"
+    },
+    {
+      "proposal_id": "ASH-00029",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "قال تعالى لقد منّ اللّٰه على المؤمنين إذ بعث فيهم رسولاًمن أنفسهم يتلو عليهم آياته ويزكيهم ويعلمهم الكتاب والحكمة وإن كانوا من قبل لفي ضلال مبين ا."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم صَلُّوا عَلَيَّ فَإِنَّ صَلاَتَك عَلَيَّ زَكَاةٌ لَكُمْ وَإِنَّ هَا أَضْعَافٌ مُضَاعَفَةٌ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 2,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول صَلُّوا عَلَيَّ فَإِنَّ اللّٰه عَزَّ وَجَلَّ يُصَلِّي عَلَيْكُمْ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 3,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم لاَتَجْعَلُوا قَبْرِي عِيداًوَصَلُّوا عَلَيَّ فَإِنَّ صَلاَتَكُمْ تَبْلُغُنِي حَيْثُ كُنْتُمْ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 4,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم حَيْثُمَا كُنْتُمْ فَصَلُّوا عَلَيَّ فَإِنَّ صَلاَتَكُمْ تَبْلُغُنِي حَيْثُ كُنْتُمْ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 5,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم حَيْثُمَا كُنْتُمْ فَصَلُّوا عَلَيُّ فَإِنُّ صَلاَتَكُمْ تَبْلُغُنِي."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 6,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم إِ نُّ للّٰه مَلاَئِكَةً سَيُّاحِينَ يُبَلِّغُونِي عَنْ أُمُّ تِي السَّ لاَمَ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 7,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلُّى عَلَيُّ بَلَغَتْنِي صَلاَتُهُ وَصَلُّيْتُ عَلَيْهِ وَكُتِبَ لَهُ سِوَى ذَلِكَ عَشْرُ حَسَنَاتٍ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 8,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلُّى عَلَيُّ عِنْدَ قَبْرِي سَمِعْتُهُ وَمَنْ صَلُّى عَلَيَّ غَائِباًبُلِّغْتُهُ وقال صلى اللّٰه عليه وسلم مَا مِنْ أَحَدٍ يُس..."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 9,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم لَقِيتُ جِبْرِيلَ فَقَالَ لِي إِ نِّي أُبَشِّرُكَ أَنَّ يَقُولُ مَنِْنِي جِبْرِيلُ عَلَيْهِ السَّ لاَمُ فَقَالَ يَا مُحَمَّدُ لاَيُصَ..."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 10,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم جَاءَ أَحَدٌ إٍلاَّ صَلَّى عَلَيْهِ سَبْعُونَ أَلْفَ مَلَكٍ وَمَنْ صَلَّتْ عَلَيْهِ الْمَلاَئِكَةُ كَانَ مِنْ أَهْلِ الْجَنَّةِ."
+    },
+    {
+      "proposal_id": "ASH-00033",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 11,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول:\" إِنَّ للّٰه تَعَالَى مَلَكاً أَعْطَاهُ أَسْمَاعَ الْخَلاَئِقِ"
+    },
+    {
+      "proposal_id": "ASH-00035",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً مِنْ أُمَّ تِي كَتَبَ اللّٰه لَهُعَشْرَ حَسَنَاتٍ وَمَحَى عَنْهُ عَشْرَ سَيِّئَاتٍ وَرَفَعَهُ بِهَا عَش..."
+    },
+    {
+      "proposal_id": "ASH-00035",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ وَاحِدَةً صلى اللّٰه عليهِ وَمَلاَئِكَتُهُ سبعينَ صَلاَةً\"."
+    },
+    {
+      "proposal_id": "ASH-00035",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 2,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول:\" مَنْ صَلَّى عَلَيَّ فِي يَوْمٍ أَلْفَ مَرَّ ةٍ لَمْ يَمْتُ حَتَّى يَرَى مَقْعَدَهُ مِنَ."
+    },
+    {
+      "proposal_id": "ASH-00036",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم لأبي كاهل الصحابي رضي اللّٰه عنه:\" يَا أَبَا كَاهِلٍ مَنْ صَلَّى عَلَيَّ كُلَّ يَوْمٍ ثَلاَثَ مَرَّ اتٍ وَكُلَّ لَيْلَىٍ ثَلاَثَ مَرّ..."
+    },
+    {
+      "proposal_id": "ASH-00038",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً كَتَبَ اللّٰه لَهُقِيَراطاًمِنَ الأَجْرِ وَالْقِيرَاطُ مِثْلُ أُحُدٍ\"."
+    },
+    {
+      "proposal_id": "ASH-00038",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً لَمْ تَزَلِ الْمَلاَئِكَةُ تُصَلِّي عَلَيْهِ مَا صَلَّى عَلَيَّ فَلْيُقِلَّ مِنْ ذَلِكَ عَبْدٌ أَوْ لِي..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "قال رسول اللّٰه صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مَنْ الصَّ لاَةِ فِي يَوْمِ الْجُمُعَةِ وَلَيْلَةِ الْجُمُعَةِ فَمَنْ صَلَّى عَلَيً صَلاَةً صَلَّى اللّ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا مَنَ الصَّ لاَةِ عَلَيَّ يَوْمَ الْجُمُعَةِ فَإِنَّهُ أَتَانِي جِبْرِيلُ آنِفاًعَنْ رَبِّهِ عَزَّ وَجَلَّ فَقَالَ مَا عَلَ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 2,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا مِنَ الصَّ لاَةِ عَلَيَّ يَوْمَ الْجُمُعَةِ فَإِنَّهُ يَوْمٌ مَشْهُودٌ تَشْهَدُهُ الْمَلاَئِكَةُ وَإِنَّ أَحَداً لَنْ يُصَ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 3,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مِنَ الصَّ لاَةِ يَوْمَ الْجُمُعَةِ فَإِنَّ صَلاَةَ أُمَّ تِي تُعْرَضُ كُلِّ يَوْمِ جُمُعَةٍ فَمَنْ كَانَ أَكْثَرَ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 4,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مِنْ أَفْضَلُ أَيَّامِكُمْ يَوْمُ الْجُمُعَةِ فِيهِ خُلِقَ وَفِيهِ النَّفْخَةُ وَفِيهِ الْصَّ عْقَةُ فَأَكْثِرُوا عَلَيَّ مِنَ الصَّ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 5,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مِنَ الصَّ لاَةِ يَوْمَ الْجُمُعَةِ وَلَيْلَةَالْجُمُعَةِ فَمَنْ فَعَلَ ذَلِكَ كُنْتُ لَهُ شَهِيداًوَشَفِيعاًيَوْم..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 6,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا الصَّ لاَةَ عَلَى نَبِيِّكُمْ فِي اللًيْلَةِ الغَرَّاءِ وَالْيَوْمِ الأَزْهَرِ."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 7,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ مِائَةَ مَرَّ ةٍ غُفِرَتْ لَهُخَطِيئَةُثَمَانِينَ سَنَةً."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 8,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ فِي يَوْمِ الْجُمُعَةِ أَلْفَ مَرَّ ةٍ لَمْ يَمُتْ حَتَّى يَرَى مَقْعَدَهُ مِنَ الْجَنَّةِ."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 9,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ كَانَتْ شَفَاعَةً لَهُيَوْمِ الْقِيَامَةِ."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 10,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ ثَمَانِينَ مَرَّ ةً غُفِرَتْ لَهُذُنُوبُ ثَمَانِينَ عَاماًفَقِيلَ لَهُرَسُولَ اللّٰه كَيْفَ ال..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 11,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم إِنَّ للّٰه مَلاَئِكَةً خُلِقُوا مِنَ النُّورِ لاَيَهْبِطُونَ إِلاَّ لَيْلَةَالْجُمُعَةِ وَيَوْمَ الْجُمُعَةِ بِأَيْدِيهِمْ أَقْلاَمٌ..."
+    },
+    {
+      "proposal_id": "ASH-00044",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 12,
+      "text_preview": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُولِكَ النَّبِيِّ الأُمِّيِّ وَتَعْقِدُ وَاحِدَةً وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى صَلاَةَ الْع..."
+    },
+    {
+      "proposal_id": "ASH-00047",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول الصَّ لاَةِ عَلَيَّ نِورٌ يَوْمَ الْقِيَامَةِ عَنْدَ ظِلْمَةِ الصِّرَاطِ فَأَكْثِرُوا مِنَ الصَّ لاَةِ عَلَيَّ وكان صلى اللّٰه ع..."
+    },
+    {
+      "proposal_id": "ASH-00048",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ عَسُرَتْ عَلَيْهِ حَاجَتُهُ فَلْيُكْثِرْ مِنَ الصَّ لاَةِ عَلَيَّ فَإِنَّ هَا تَكْشِفُ الْهُمُومَ وَالْغُمُومَ وَالْكُرُوبَ وَتُ..."
+    },
+    {
+      "proposal_id": "ASH-00049",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ عَسُرَ عَلَيْهِ شَيْءٌ فَلْيُكْثِرْ مِنَ الصَّ لاَةِ عَلَيَّ فَإِنَّ هَا تَحُلُّ الْعُقَدَ وَتَكْشِفُ الْكُرَبَ."
+    },
+    {
+      "proposal_id": "ASH-00051",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: أَكْثَرُكُمْ أَزْوَاجاًفِي الْجَنَّةِ أَكْثَرُكُمْ صَلاَةً عَلَيَّ."
+    },
+    {
+      "proposal_id": "ASH-00052",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم أَوْلَى النَّاسِ بِي يَوْمَ الْقِيَامَةِ أَكْثَرُهُمْ عَلَيَّ صَلاَةً."
+    },
+    {
+      "proposal_id": "ASH-00053",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم ثَلاَثَةٌ تَحْتَ ظِلِّهَ عَرْشِ اللّٰه يَوْمَ الْقِيَامَةِ يَوْمَ لاَظِلَّ إِلاَّ ظِلُّهُ قِيلَ مَنْ هُمْ يَا رَسُولَ اللّٰه قَالَ مَ..."
+    },
+    {
+      "proposal_id": "ASH-00073",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "قال رسول اللّٰه صلى اللّٰه عليه وسلم: إِ ذَا سَمِعْتُمُالمْؤَذِّنَ فَقُولُوا مِثْلَ مَا يَقُولُ وَصَلُّوا عَلَيَّ فَإِنَّهُمَنْ صَلَّى عَلَيَّ مّرَّ ةً صَلَّى..."
+    },
+    {
+      "proposal_id": "ASH-00073",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم: مَنْ قَالَ حِينَ يَسْمَعُ الأَذَانَ وَالإِ قَامَةَ اللَّهُمَّ رَبَّ هَذِهِ الدَّ عْوَةٍ التَّامَّ ةِ وَالصَّ لاَةِ القَائِمَةِ صَلِّ..."
+    },
+    {
+      "proposal_id": "ASH-00079",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم: من صَلَّى عَلَيَّ حِينَ يُصْ بِحُ عَشْراًوَحِينَ يُمْسِي عَشْراًأَدْرَكَتْهُ شَفَاعَتِي يَوْمَ الْقِيَامَةِ."
+    },
+    {
+      "proposal_id": "ASH-00079",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 1,
+      "text_preview": "وقال صلى اللّٰه عليه وسلم: إِنَّ اللّٰه تَعَالَى لَيَنْظُرُإِ لَى مَنْ يُصَلِّي عَلَيَّ وَمَنْ نَظَرَاللّٰه تَعَالَى إِ لَيْهِ لاَيُعَذِّبُهُ أَبَداً."
+    },
+    {
+      "proposal_id": "ASH-00080",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: إِ ذَا جَلَسَ قَوْمٌ يُصَلُّونَ عَلَيَّ حَفَّ تْ بِهِمُ الْمَلاَئِكَةُ مِنْ لَدُنْ أَقْدَامِهِمْ إِ لَى عَنَانِ السَّ مَاءِ بِأ..."
+    },
+    {
+      "proposal_id": "ASH-00081",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: الصَّ لاَةُ عَلَيَّ أَمْحَقُ لِلْخَطَايَا مِنَ الْمَاءِ لِلنَّارِ وَالسَّ لاَمُ عَلَيَّ أَفْضَلُ مِنْ عِتْقِ الرِّقَابِ وَحُبِّ..."
+    },
+    {
+      "proposal_id": "ASH-00082",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: رَأَيْتُ الْبَارِحَةَ عَجَباًرَجُلاًمِنْ أُمَّ تِي يَزْحَفُ عَلَى الصِّرَاطِ مَرَّ ةً وَيَحْبُو مَرَّ ةً وَيَخِرُّ مَرَّ ةً وَي..."
+    },
+    {
+      "proposal_id": "ASH-00083",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: زَيِّنوا مَجِالِسَكُمْ بٍالصَّ لاَةِ عَلَيَّ فَإِنَّ صَلاَتَكُمْ نُورٌ لَكْمِ يَوْمَ الْقِيَامَةِ."
+    },
+    {
+      "proposal_id": "ASH-00084",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: أَقْرَبُ مَا يَكُونُ أَحَدُكُمْ مِنِّي إِ ذَا ذَكَرَنِي وَصَلَّى عَلَيَّ."
+    },
+    {
+      "proposal_id": "ASH-00085",
+      "severity": "warn",
+      "code": "scripture_segment_missing_ref",
+      "message": "ayah/hadith segment has no visible reference.",
+      "segment_index": 0,
+      "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: مَنْ صَلَّى عَلَيَّ طَهَّ رَاللّٰه قَلْبَهُ مِنَ النِّفَاقِ كَمَا يُطَهِّرُالثَّوبَ الْمَاءُ."
+    }
+  ],
+  "findings_by_id": {
+    "ASH-00008": [
+      {
+        "proposal_id": "ASH-00008",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "بسم اللّٰه الرحمن الرحيم"
+      }
+    ],
+    "ASH-00029": [
+      {
+        "proposal_id": "ASH-00029",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "قال تعالى لقد منّ اللّٰه على المؤمنين إذ بعث فيهم رسولاًمن أنفسهم يتلو عليهم آياته ويزكيهم ويعلمهم الكتاب والحكمة وإن كانوا من قبل لفي ضلال مبين ا."
+      }
+    ],
+    "ASH-00033": [
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم صَلُّوا عَلَيَّ فَإِنَّ صَلاَتَك عَلَيَّ زَكَاةٌ لَكُمْ وَإِنَّ هَا أَضْعَافٌ مُضَاعَفَةٌ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 2,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول صَلُّوا عَلَيَّ فَإِنَّ اللّٰه عَزَّ وَجَلَّ يُصَلِّي عَلَيْكُمْ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 3,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم لاَتَجْعَلُوا قَبْرِي عِيداًوَصَلُّوا عَلَيَّ فَإِنَّ صَلاَتَكُمْ تَبْلُغُنِي حَيْثُ كُنْتُمْ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 4,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم حَيْثُمَا كُنْتُمْ فَصَلُّوا عَلَيَّ فَإِنَّ صَلاَتَكُمْ تَبْلُغُنِي حَيْثُ كُنْتُمْ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 5,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم حَيْثُمَا كُنْتُمْ فَصَلُّوا عَلَيُّ فَإِنُّ صَلاَتَكُمْ تَبْلُغُنِي."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 6,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم إِ نُّ للّٰه مَلاَئِكَةً سَيُّاحِينَ يُبَلِّغُونِي عَنْ أُمُّ تِي السَّ لاَمَ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 7,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلُّى عَلَيُّ بَلَغَتْنِي صَلاَتُهُ وَصَلُّيْتُ عَلَيْهِ وَكُتِبَ لَهُ سِوَى ذَلِكَ عَشْرُ حَسَنَاتٍ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 8,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلُّى عَلَيُّ عِنْدَ قَبْرِي سَمِعْتُهُ وَمَنْ صَلُّى عَلَيَّ غَائِباًبُلِّغْتُهُ وقال صلى اللّٰه عليه وسلم مَا مِنْ أَحَدٍ يُس..."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 9,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم لَقِيتُ جِبْرِيلَ فَقَالَ لِي إِ نِّي أُبَشِّرُكَ أَنَّ يَقُولُ مَنِْنِي جِبْرِيلُ عَلَيْهِ السَّ لاَمُ فَقَالَ يَا مُحَمَّدُ لاَيُصَ..."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 10,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم جَاءَ أَحَدٌ إٍلاَّ صَلَّى عَلَيْهِ سَبْعُونَ أَلْفَ مَلَكٍ وَمَنْ صَلَّتْ عَلَيْهِ الْمَلاَئِكَةُ كَانَ مِنْ أَهْلِ الْجَنَّةِ."
+      },
+      {
+        "proposal_id": "ASH-00033",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 11,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول:\" إِنَّ للّٰه تَعَالَى مَلَكاً أَعْطَاهُ أَسْمَاعَ الْخَلاَئِقِ"
+      }
+    ],
+    "ASH-00035": [
+      {
+        "proposal_id": "ASH-00035",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً مِنْ أُمَّ تِي كَتَبَ اللّٰه لَهُعَشْرَ حَسَنَاتٍ وَمَحَى عَنْهُ عَشْرَ سَيِّئَاتٍ وَرَفَعَهُ بِهَا عَش..."
+      },
+      {
+        "proposal_id": "ASH-00035",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ وَاحِدَةً صلى اللّٰه عليهِ وَمَلاَئِكَتُهُ سبعينَ صَلاَةً\"."
+      },
+      {
+        "proposal_id": "ASH-00035",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 2,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول:\" مَنْ صَلَّى عَلَيَّ فِي يَوْمٍ أَلْفَ مَرَّ ةٍ لَمْ يَمْتُ حَتَّى يَرَى مَقْعَدَهُ مِنَ."
+      }
+    ],
+    "ASH-00036": [
+      {
+        "proposal_id": "ASH-00036",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم لأبي كاهل الصحابي رضي اللّٰه عنه:\" يَا أَبَا كَاهِلٍ مَنْ صَلَّى عَلَيَّ كُلَّ يَوْمٍ ثَلاَثَ مَرَّ اتٍ وَكُلَّ لَيْلَىٍ ثَلاَثَ مَرّ..."
+      }
+    ],
+    "ASH-00038": [
+      {
+        "proposal_id": "ASH-00038",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً كَتَبَ اللّٰه لَهُقِيَراطاًمِنَ الأَجْرِ وَالْقِيرَاطُ مِثْلُ أُحُدٍ\"."
+      },
+      {
+        "proposal_id": "ASH-00038",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم:\" مَنْ صَلَّى عَلَيَّ صَلاَةً لَمْ تَزَلِ الْمَلاَئِكَةُ تُصَلِّي عَلَيْهِ مَا صَلَّى عَلَيَّ فَلْيُقِلَّ مِنْ ذَلِكَ عَبْدٌ أَوْ لِي..."
+      }
+    ],
+    "ASH-00044": [
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "قال رسول اللّٰه صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مَنْ الصَّ لاَةِ فِي يَوْمِ الْجُمُعَةِ وَلَيْلَةِ الْجُمُعَةِ فَمَنْ صَلَّى عَلَيً صَلاَةً صَلَّى اللّ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا مَنَ الصَّ لاَةِ عَلَيَّ يَوْمَ الْجُمُعَةِ فَإِنَّهُ أَتَانِي جِبْرِيلُ آنِفاًعَنْ رَبِّهِ عَزَّ وَجَلَّ فَقَالَ مَا عَلَ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 2,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا مِنَ الصَّ لاَةِ عَلَيَّ يَوْمَ الْجُمُعَةِ فَإِنَّهُ يَوْمٌ مَشْهُودٌ تَشْهَدُهُ الْمَلاَئِكَةُ وَإِنَّ أَحَداً لَنْ يُصَ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 3,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مِنَ الصَّ لاَةِ يَوْمَ الْجُمُعَةِ فَإِنَّ صَلاَةَ أُمَّ تِي تُعْرَضُ كُلِّ يَوْمِ جُمُعَةٍ فَمَنْ كَانَ أَكْثَرَ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 4,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مِنْ أَفْضَلُ أَيَّامِكُمْ يَوْمُ الْجُمُعَةِ فِيهِ خُلِقَ وَفِيهِ النَّفْخَةُ وَفِيهِ الْصَّ عْقَةُ فَأَكْثِرُوا عَلَيَّ مِنَ الصَّ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 5,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا عَلَيَّ مِنَ الصَّ لاَةِ يَوْمَ الْجُمُعَةِ وَلَيْلَةَالْجُمُعَةِ فَمَنْ فَعَلَ ذَلِكَ كُنْتُ لَهُ شَهِيداًوَشَفِيعاًيَوْم..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 6,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَكْثِرُوا الصَّ لاَةَ عَلَى نَبِيِّكُمْ فِي اللًيْلَةِ الغَرَّاءِ وَالْيَوْمِ الأَزْهَرِ."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 7,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ مِائَةَ مَرَّ ةٍ غُفِرَتْ لَهُخَطِيئَةُثَمَانِينَ سَنَةً."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 8,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ فِي يَوْمِ الْجُمُعَةِ أَلْفَ مَرَّ ةٍ لَمْ يَمُتْ حَتَّى يَرَى مَقْعَدَهُ مِنَ الْجَنَّةِ."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 9,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ كَانَتْ شَفَاعَةً لَهُيَوْمِ الْقِيَامَةِ."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 10,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى عَلَيَّ يَوْمَ الْجُمُعَةِ ثَمَانِينَ مَرَّ ةً غُفِرَتْ لَهُذُنُوبُ ثَمَانِينَ عَاماًفَقِيلَ لَهُرَسُولَ اللّٰه كَيْفَ ال..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 11,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم إِنَّ للّٰه مَلاَئِكَةً خُلِقُوا مِنَ النُّورِ لاَيَهْبِطُونَ إِلاَّ لَيْلَةَالْجُمُعَةِ وَيَوْمَ الْجُمُعَةِ بِأَيْدِيهِمْ أَقْلاَمٌ..."
+      },
+      {
+        "proposal_id": "ASH-00044",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 12,
+        "text_preview": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُولِكَ النَّبِيِّ الأُمِّيِّ وَتَعْقِدُ وَاحِدَةً وقال صلى اللّٰه عليه وسلم مَنْ صَلَّى صَلاَةَ الْع..."
+      }
+    ],
+    "ASH-00047": [
+      {
+        "proposal_id": "ASH-00047",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول الصَّ لاَةِ عَلَيَّ نِورٌ يَوْمَ الْقِيَامَةِ عَنْدَ ظِلْمَةِ الصِّرَاطِ فَأَكْثِرُوا مِنَ الصَّ لاَةِ عَلَيَّ وكان صلى اللّٰه ع..."
+      }
+    ],
+    "ASH-00048": [
+      {
+        "proposal_id": "ASH-00048",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ عَسُرَتْ عَلَيْهِ حَاجَتُهُ فَلْيُكْثِرْ مِنَ الصَّ لاَةِ عَلَيَّ فَإِنَّ هَا تَكْشِفُ الْهُمُومَ وَالْغُمُومَ وَالْكُرُوبَ وَتُ..."
+      }
+    ],
+    "ASH-00049": [
+      {
+        "proposal_id": "ASH-00049",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم مَنْ عَسُرَ عَلَيْهِ شَيْءٌ فَلْيُكْثِرْ مِنَ الصَّ لاَةِ عَلَيَّ فَإِنَّ هَا تَحُلُّ الْعُقَدَ وَتَكْشِفُ الْكُرَبَ."
+      }
+    ],
+    "ASH-00051": [
+      {
+        "proposal_id": "ASH-00051",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: أَكْثَرُكُمْ أَزْوَاجاًفِي الْجَنَّةِ أَكْثَرُكُمْ صَلاَةً عَلَيَّ."
+      }
+    ],
+    "ASH-00052": [
+      {
+        "proposal_id": "ASH-00052",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم أَوْلَى النَّاسِ بِي يَوْمَ الْقِيَامَةِ أَكْثَرُهُمْ عَلَيَّ صَلاَةً."
+      }
+    ],
+    "ASH-00053": [
+      {
+        "proposal_id": "ASH-00053",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم ثَلاَثَةٌ تَحْتَ ظِلِّهَ عَرْشِ اللّٰه يَوْمَ الْقِيَامَةِ يَوْمَ لاَظِلَّ إِلاَّ ظِلُّهُ قِيلَ مَنْ هُمْ يَا رَسُولَ اللّٰه قَالَ مَ..."
+      }
+    ],
+    "ASH-00073": [
+      {
+        "proposal_id": "ASH-00073",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "قال رسول اللّٰه صلى اللّٰه عليه وسلم: إِ ذَا سَمِعْتُمُالمْؤَذِّنَ فَقُولُوا مِثْلَ مَا يَقُولُ وَصَلُّوا عَلَيَّ فَإِنَّهُمَنْ صَلَّى عَلَيَّ مّرَّ ةً صَلَّى..."
+      },
+      {
+        "proposal_id": "ASH-00073",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم: مَنْ قَالَ حِينَ يَسْمَعُ الأَذَانَ وَالإِ قَامَةَ اللَّهُمَّ رَبَّ هَذِهِ الدَّ عْوَةٍ التَّامَّ ةِ وَالصَّ لاَةِ القَائِمَةِ صَلِّ..."
+      }
+    ],
+    "ASH-00079": [
+      {
+        "proposal_id": "ASH-00079",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم: من صَلَّى عَلَيَّ حِينَ يُصْ بِحُ عَشْراًوَحِينَ يُمْسِي عَشْراًأَدْرَكَتْهُ شَفَاعَتِي يَوْمَ الْقِيَامَةِ."
+      },
+      {
+        "proposal_id": "ASH-00079",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 1,
+        "text_preview": "وقال صلى اللّٰه عليه وسلم: إِنَّ اللّٰه تَعَالَى لَيَنْظُرُإِ لَى مَنْ يُصَلِّي عَلَيَّ وَمَنْ نَظَرَاللّٰه تَعَالَى إِ لَيْهِ لاَيُعَذِّبُهُ أَبَداً."
+      }
+    ],
+    "ASH-00080": [
+      {
+        "proposal_id": "ASH-00080",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: إِ ذَا جَلَسَ قَوْمٌ يُصَلُّونَ عَلَيَّ حَفَّ تْ بِهِمُ الْمَلاَئِكَةُ مِنْ لَدُنْ أَقْدَامِهِمْ إِ لَى عَنَانِ السَّ مَاءِ بِأ..."
+      }
+    ],
+    "ASH-00081": [
+      {
+        "proposal_id": "ASH-00081",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: الصَّ لاَةُ عَلَيَّ أَمْحَقُ لِلْخَطَايَا مِنَ الْمَاءِ لِلنَّارِ وَالسَّ لاَمُ عَلَيَّ أَفْضَلُ مِنْ عِتْقِ الرِّقَابِ وَحُبِّ..."
+      }
+    ],
+    "ASH-00082": [
+      {
+        "proposal_id": "ASH-00082",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: رَأَيْتُ الْبَارِحَةَ عَجَباًرَجُلاًمِنْ أُمَّ تِي يَزْحَفُ عَلَى الصِّرَاطِ مَرَّ ةً وَيَحْبُو مَرَّ ةً وَيَخِرُّ مَرَّ ةً وَي..."
+      }
+    ],
+    "ASH-00083": [
+      {
+        "proposal_id": "ASH-00083",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: زَيِّنوا مَجِالِسَكُمْ بٍالصَّ لاَةِ عَلَيَّ فَإِنَّ صَلاَتَكُمْ نُورٌ لَكْمِ يَوْمَ الْقِيَامَةِ."
+      }
+    ],
+    "ASH-00084": [
+      {
+        "proposal_id": "ASH-00084",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: أَقْرَبُ مَا يَكُونُ أَحَدُكُمْ مِنِّي إِ ذَا ذَكَرَنِي وَصَلَّى عَلَيَّ."
+      }
+    ],
+    "ASH-00085": [
+      {
+        "proposal_id": "ASH-00085",
+        "severity": "warn",
+        "code": "scripture_segment_missing_ref",
+        "message": "ayah/hadith segment has no visible reference.",
+        "segment_index": 0,
+        "text_preview": "وكان صلى اللّٰه عليه وسلم يقول: مَنْ صَلَّى عَلَيَّ طَهَّ رَاللّٰه قَلْبَهُ مِنَ النِّفَاقِ كَمَا يُطَهِّرُالثَّوبَ الْمَاءُ."
+      }
+    ]
+  },
+  "strict_safe_ids": [
+    "ASH-00009",
+    "ASH-00010",
+    "ASH-00016",
+    "ASH-00019",
+    "ASH-00020",
+    "ASH-00023",
+    "ASH-00026",
+    "ASH-00028",
+    "ASH-00030",
+    "ASH-00031",
+    "ASH-00039",
+    "ASH-00045",
+    "ASH-00054",
+    "ASH-00055",
+    "ASH-00057",
+    "ASH-00064",
+    "ASH-00067",
+    "ASH-00069",
+    "ASH-00071"
+  ],
+  "non_failing_ids": [
+    "ASH-00008",
+    "ASH-00009",
+    "ASH-00010",
+    "ASH-00016",
+    "ASH-00019",
+    "ASH-00020",
+    "ASH-00023",
+    "ASH-00026",
+    "ASH-00028",
+    "ASH-00029",
+    "ASH-00030",
+    "ASH-00031",
+    "ASH-00033",
+    "ASH-00035",
+    "ASH-00036",
+    "ASH-00038",
+    "ASH-00039",
+    "ASH-00044",
+    "ASH-00045",
+    "ASH-00047",
+    "ASH-00048",
+    "ASH-00049",
+    "ASH-00051",
+    "ASH-00052",
+    "ASH-00053",
+    "ASH-00054",
+    "ASH-00055",
+    "ASH-00057",
+    "ASH-00064",
+    "ASH-00067",
+    "ASH-00069",
+    "ASH-00071",
+    "ASH-00073",
+    "ASH-00079",
+    "ASH-00080",
+    "ASH-00081",
+    "ASH-00082",
+    "ASH-00083",
+    "ASH-00084",
+    "ASH-00085"
+  ]
+}

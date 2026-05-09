@@ -104,6 +104,26 @@
   ]
 ]
 
+#let semantic_segment(kind, body, id: "", source: [], review: false) = [
+  #metadata((kind: "semantic-segment", id: id, role: kind, review: review))
+  #if kind == "ayah" or kind == "ayat" [
+    #ayah_text_block(body)
+    #if source != [] [
+      #align(left)[#text(size: 0.72em, fill: luma(42%))[#source]]
+    ]
+  ] else if kind == "hadith" [
+    #quote_block(source, body)
+  ] else if kind == "dua" or kind == "matn" [
+    #matn_block(body)
+  ] else if kind == "quote" [
+    #quote_block(source, body)
+  ] else if kind == "poem" [
+    #poem_block(body)
+  ] else [
+    #block(above: 0.14em, below: 0.42em)[#body]
+  ]
+]
+
 #let editor_note(body) = [
   #block(
     above: 0.5em,

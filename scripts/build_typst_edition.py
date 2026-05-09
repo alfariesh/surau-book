@@ -24,8 +24,24 @@ ANNOTATION_ROLE_MAP = {
     "ayah": "ayat",
     "ayat": "ayat",
     "body": "body",
+    "biography": "body",
+    "dua": "matn",
+    "hadith": "quote",
+    "list": "body",
     "matn": "matn",
     "poem": "poem",
+    "quote": "quote",
+    "source_catalog": "body",
+}
+SEGMENT_KIND_MAP = {
+    "ayah": "ayah",
+    "ayat": "ayah",
+    "body": "body",
+    "dua": "dua",
+    "hadith": "hadith",
+    "matn": "matn",
+    "poem": "poem",
+    "prose": "body",
     "quote": "quote",
 }
 
@@ -232,6 +248,97 @@ def annotation_role(annotation: dict[str, Any]) -> str | None:
     return None
 
 
+def is_punctuation_fragment(text: str) -> bool:
+    stripped = (text or "").strip()
+    return bool(stripped) and all(char in "،,؛;:.}{[]()ـ*- " for char in stripped)
+
+
+def display_span_bounds(text: str, segment: dict[str, Any], start: int, end: int) -> tuple[int, int, int, int]:
+    """Return source bounds plus visual wrapper bounds for segment rendering.
+
+    The canonical segment remains start/end. display_start/display_end may consume
+    old print delimiters around Quran spans so they do not hang in the new layout.
+    """
+
+    display_start = start
+    display_end = end
+    kind = segment.get("kind")
+    if kind in {"ayah", "ayat"}:
+        cursor = start - 1
+        while cursor >= 0 and text[cursor].isspace():
+            cursor -= 1
+        if cursor >= 0 and text[cursor] == "}":
+            display_start = cursor
+
+        cursor = end
+        while cursor < len(text) and text[cursor].isspace():
+            cursor += 1
+        if cursor < len(text) and text[cursor] == "{":
+            display_end = cursor + 1
+
+    return start, end, display_start, display_end
+
+
+def semantic_segments_for_text(text: str, annotation: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not annotation:
+        return []
+
+    proposal = annotation.get("llm_proposal")
+    if not isinstance(proposal, dict):
+        return []
+
+    raw_segments = proposal.get("segments")
+    if not isinstance(raw_segments, list):
+        return []
+
+    segments: list[dict[str, Any]] = []
+    for segment in raw_segments:
+        if not isinstance(segment, dict):
+            continue
+        kind = SEGMENT_KIND_MAP.get(str(segment.get("kind") or ""))
+        source_span = segment.get("source_span")
+        if not kind or not isinstance(source_span, dict):
+            continue
+        start = source_span.get("start")
+        end = source_span.get("end")
+        segment_text = str(segment.get("text") or "")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if start < 0 or end <= start or end > len(text):
+            continue
+        if text[start:end] != segment_text:
+            continue
+        source_start, source_end, display_start, display_end = display_span_bounds(
+            text,
+            segment,
+            start,
+            end,
+        )
+        segments.append(
+            {
+                "kind": kind,
+                "span_id": str(segment.get("span_id") or source_span.get("span_id") or ""),
+                "text": segment_text,
+                "ref": str(segment.get("ref") or ""),
+                "review_required": bool(segment.get("review_required")),
+                "source_start": source_start,
+                "source_end": source_end,
+                "display_start": display_start,
+                "display_end": display_end,
+            }
+        )
+
+    segments.sort(key=lambda item: (item["display_start"], item["display_end"]))
+    clean_segments: list[dict[str, Any]] = []
+    cursor = 0
+    for segment in segments:
+        if segment["display_start"] < cursor:
+            continue
+        clean_segments.append(segment)
+        cursor = segment["display_end"]
+    return clean_segments
+
+
 def annotate_passage_roles(
     elements: list[dict[str, Any]],
     annotations: dict[str, dict[str, Any]] | None = None,
@@ -256,6 +363,9 @@ def annotate_passage_roles(
                     for key in ("kind", "layout", "status", "confidence", "signals")
                     if key in annotation
                 }
+                segments = semantic_segments_for_text(element["text"], annotation)
+                if segments:
+                    element["segments"] = segments
     return elements
 
 
@@ -266,7 +376,7 @@ def render_typst_elements(
 ) -> str:
     lines = [
         f"// Generated from {source_name}. Edit manuscript.md, then regenerate this file.",
-        f'#import "{typst_escape_string(components_import)}": passage',
+        f'#import "{typst_escape_string(components_import)}": passage, semantic_segment',
         "",
     ]
     for element in elements:
@@ -276,14 +386,55 @@ def render_typst_elements(
             lines.append("")
             continue
 
-        pid = typst_escape_string(element["id"])
-        text = typst_escape_text(element["text"])
-        role = typst_escape_string(element.get("role") or "body")
-        lines.append(f'#passage("{pid}", role: "{role}")[')
-        lines.append(text)
-        lines.append("]")
-        lines.append("")
+        lines.extend(render_passage_element(element))
     return "\n".join(lines).rstrip() + "\n"
+
+
+def render_plain_fragment(lines: list[str], text: str) -> None:
+    if not text or not text.strip() or is_punctuation_fragment(text):
+        return
+    lines.append(typst_escape_text(text.strip()))
+    lines.append("")
+
+
+def render_semantic_segment(lines: list[str], passage_id: str, segment: dict[str, Any]) -> None:
+    kind = typst_escape_string(segment["kind"])
+    span_id = typst_escape_string(segment.get("span_id") or "")
+    full_id = typst_escape_string(f"{passage_id}:{span_id}" if span_id else passage_id)
+    ref = str(segment.get("ref") or "").strip()
+    source_arg = "[]" if not ref else f"[{typst_escape_text(ref)}]"
+    review = "true" if segment.get("review_required") else "false"
+    lines.append(
+        f'#semantic_segment("{kind}", id: "{full_id}", source: {source_arg}, review: {review})['
+    )
+    lines.append(typst_escape_text(segment["text"]))
+    lines.append("]")
+    lines.append("")
+
+
+def render_passage_element(element: dict[str, Any]) -> list[str]:
+    pid = typst_escape_string(element["id"])
+    role = typst_escape_string(element.get("role") or "body")
+    segments = element.get("segments") or []
+    if not segments:
+        return [
+            f'#passage("{pid}", role: "{role}")[',
+            typst_escape_text(element["text"]),
+            "]",
+            "",
+        ]
+
+    lines = [f'#passage("{pid}", role: "body")[']
+    cursor = 0
+    text = element["text"]
+    for segment in segments:
+        render_plain_fragment(lines, text[cursor : segment["display_start"]])
+        render_semantic_segment(lines, element["id"], segment)
+        cursor = segment["display_end"]
+    render_plain_fragment(lines, text[cursor:])
+    lines.append("]")
+    lines.append("")
+    return lines
 
 
 def render_entrypoint_typ(
@@ -411,11 +562,17 @@ def main() -> None:
     )
     role_counts: dict[str, int] = {}
     annotation_kind_counts: dict[str, int] = {}
+    semantic_segment_kind_counts: dict[str, int] = {}
     annotated_count = 0
     for element in elements:
         if element["type"] == "passage":
             role = element.get("role") or "body"
             role_counts[role] = role_counts.get(role, 0) + 1
+            for segment in element.get("segments") or []:
+                segment_kind = str(segment.get("kind") or "unknown")
+                semantic_segment_kind_counts[segment_kind] = (
+                    semantic_segment_kind_counts.get(segment_kind, 0) + 1
+                )
             annotation = element.get("annotation")
             if isinstance(annotation, dict):
                 annotated_count += 1
@@ -435,6 +592,8 @@ def main() -> None:
                 "annotations": str(annotations_path) if annotations_path else None,
                 "annotated_passages": annotated_count,
                 "annotation_kinds": annotation_kind_counts,
+                "semantic_segments": sum(semantic_segment_kind_counts.values()),
+                "semantic_segment_kinds": semantic_segment_kind_counts,
                 "elements": len(elements),
                 "passages": sum(1 for element in elements if element["type"] == "passage"),
                 "passage_roles": role_counts,

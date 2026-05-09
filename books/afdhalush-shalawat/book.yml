@@ -9,7 +9,7 @@ canonical_language: ar
 status: draft_extraction
 heading_profile: shalawat
 default_edition: surau-v0
-working_edition: surau-v1-enhanced
+working_edition: surau-v2-enriched
 public_citation:
   source: default_edition
   anchor: passage_id
@@ -25,8 +25,11 @@ outputs:
   manuscript: manuscript.md
   clean_manuscript: clean/manuscript.md
   annotations: annotations/semantic-draft.jsonl
+  reviewed_annotations: annotations/semantic-reviewed.jsonl
+  llm_proposals: annotations/semantic-llm-proposals.jsonl
   cleaning_report: clean/cleaning-report.json
   passages: passages.jsonl
   editions:
     surau-v0: editions/surau-v0/output.pdf
     surau-v1-enhanced: editions/surau-v1-enhanced/output.pdf
+    surau-v2-enriched: editions/surau-v2-enriched/output.pdf

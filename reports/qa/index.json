@@ -73,6 +73,34 @@
           "missing": [],
           "mismatched": []
         }
+      },
+      {
+        "edition": "surau-v2-enriched",
+        "path": "books/afdhalush-shalawat/editions/surau-v2-enriched/page-map.json",
+        "entry_count": 1768,
+        "passage_count": 1768,
+        "page_semantics": "start_page",
+        "page_range": {
+          "min": 5,
+          "max": 109,
+          "unique": 103
+        },
+        "validation": {
+          "duplicate_ids": [],
+          "missing_passage_ids": [],
+          "extra_page_map_ids": []
+        },
+        "edition_refs": {
+          "present_count": 1768,
+          "missing": [],
+          "mismatched": []
+        },
+        "public_citations": {
+          "is_default_edition": false,
+          "present_count": 0,
+          "missing": [],
+          "mismatched": []
+        }
       }
     ],
     "public_citations": 1768,

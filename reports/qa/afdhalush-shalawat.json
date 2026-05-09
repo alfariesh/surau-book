@@ -12,7 +12,7 @@
     "status": "draft_extraction",
     "heading_profile": "shalawat",
     "default_edition": "surau-v0",
-    "working_edition": "surau-v1-enhanced",
+    "working_edition": "surau-v2-enriched",
     "public_citation": {
       "source": "default_edition",
       "anchor": "passage_id"
@@ -31,11 +31,14 @@
       "manuscript": "manuscript.md",
       "clean_manuscript": "clean/manuscript.md",
       "annotations": "annotations/semantic-draft.jsonl",
+      "reviewed_annotations": "annotations/semantic-reviewed.jsonl",
+      "llm_proposals": "annotations/semantic-llm-proposals.jsonl",
       "cleaning_report": "clean/cleaning-report.json",
       "passages": "passages.jsonl",
       "editions": {
         "surau-v0": "editions/surau-v0/output.pdf",
-        "surau-v1-enhanced": "editions/surau-v1-enhanced/output.pdf"
+        "surau-v1-enhanced": "editions/surau-v1-enhanced/output.pdf",
+        "surau-v2-enriched": "editions/surau-v2-enriched/output.pdf"
       }
     }
   },
@@ -15405,6 +15408,34 @@
         "min": 5,
         "max": 106,
         "unique": 101
+      },
+      "validation": {
+        "duplicate_ids": [],
+        "missing_passage_ids": [],
+        "extra_page_map_ids": []
+      },
+      "edition_refs": {
+        "present_count": 1768,
+        "missing": [],
+        "mismatched": []
+      },
+      "public_citations": {
+        "is_default_edition": false,
+        "present_count": 0,
+        "missing": [],
+        "mismatched": []
+      }
+    },
+    {
+      "edition": "surau-v2-enriched",
+      "path": "books/afdhalush-shalawat/editions/surau-v2-enriched/page-map.json",
+      "entry_count": 1768,
+      "passage_count": 1768,
+      "page_semantics": "start_page",
+      "page_range": {
+        "min": 5,
+        "max": 109,
+        "unique": 103
       },
       "validation": {
         "duplicate_ids": [],

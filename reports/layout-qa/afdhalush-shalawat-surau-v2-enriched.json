@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "pdf": "books/afdhalush-shalawat/editions/surau-v2-enriched/output.pdf",
+  "pdfinfo": {
+    "Title": "أفضل الصلوات على سيد السادات",
+    "Author": "يوسف بن إسماعيل النبهاني",
+    "Creator": "Typst 0.14.2",
+    "CreationDate": "Fri May  8 22:02:03 2026 WIB",
+    "ModDate": "Fri May  8 22:02:03 2026 WIB",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "yes",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": 109,
+    "Encrypted": "no",
+    "Page size": "419.528 x 595.276 pts",
+    "Page rot": "0",
+    "File size": "7776900 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "source_typst": {
+    "exists": true,
+    "path": "books/afdhalush-shalawat/editions/surau-v2-enriched/book.typ",
+    "qr_widths_mm": [],
+    "oversized_qr_widths_mm": []
+  },
+  "latin_line_count": 0,
+  "latin_lines": [],
+  "technical_line_count": 0,
+  "technical_lines": [],
+  "blank_pages": [],
+  "warnings": []
+}
