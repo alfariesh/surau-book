@@ -14,6 +14,7 @@ semantic annotation, translation draft, QA report, dan citation/page-map.
 - `books/*/assets/`: experimental/parked image brief notes for future visual design.
 - `books/*/editions/`: output Typst/PDF dan page-map tiap edition.
 - `layouts/surau-arabic-book/`: template Typst reusable.
+- `firebase/`: prototype Firestore rules/indexes for editorial workspace.
 - `scripts/`: extraction, cleaning, Typst build, page-map, QA, translation, enrichment.
 - `reports/`: QA, translation review, semantic enrichment, layout QA.
 
@@ -26,6 +27,20 @@ API v0 is read-only and should serve normalized data from `book.yml`,
 `passages.jsonl`, `annotations/semantic-reviewed.jsonl`,
 `translations/{lang}/passages.jsonl`, and edition page maps. Do not expose raw
 JSONL rows directly as public responses.
+
+## Editorial Workflow
+
+- Workflow: `docs/editorial-workflow.md`
+- Firestore model: `docs/firestore-editorial-model.md`
+- Prototype rules: `firebase/firestore.rules`
+- Prototype indexes: `firebase/firestore.indexes.json`
+
+Seed local Firestore-ready review task drafts:
+
+```sh
+python3 scripts/seed_review_tasks.py \
+  --book-dir books/afdhalush-shalawat
+```
 
 ## Workflow Singkat
 

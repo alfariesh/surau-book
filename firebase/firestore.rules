@@ -1,0 +1,393 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // users_private/{uid}
+    //   - uid: string, immutable
+    //   - email: string, owner/admin only
+    //   - display_name: string
+    //   - photo_url: string|null
+    //   - created_at: timestamp, immutable
+    //   - updated_at: timestamp
+    //
+    // users_public/{uid}
+    //   - uid: string, immutable
+    //   - display_name: string
+    //   - photo_url: string|null
+    //
+    // userRoles/{uid}
+    //   - uid: string, immutable
+    //   - roles: map with optional bool keys end_user/editor/admin
+    //   - active: bool
+    //   - created_at: timestamp, immutable
+    //   - updated_at: timestamp
+    //
+    // books/{workId}
+    //   - work_id: string, immutable
+    //   - title_ar/title_id/status/default_edition/canonical_repo_path: string
+    //   - updated_at: timestamp
+    //
+    // reviewTasks/{taskId}
+    //   - task_id: string, mirrors document ID
+    //   - work_id: string
+    //   - passage_id: string|null
+    //   - task_type, priority, status, title, reason, recommended_action: string
+    //   - priority_rank: number
+    //   - assigned_to: string|null
+    //   - section_path: list
+    //   - source_citation_label/text_preview: string
+    //   - source: map
+    //   - created_by: string
+    //   - created_at/updated_at: timestamp
+    //
+    // revisions/{revisionId}
+    //   - work_id, passage_id, target, status, created_by: string
+    //   - task_id, base_version, base_value, proposed_value: string|null
+    //   - created_at/updated_at/submitted_at/reviewed_at: timestamp|null
+    //   - reviewed_by/admin_notes: string|null
+    //
+    // comments/{commentId}
+    //   - target_type, target_id, work_id, body, status, created_by: string
+    //   - passage_id: string|null
+    //   - created_at/updated_at: timestamp
+    //
+    // auditLogs/{logId}
+    //   - trusted backend only; client writes denied
+    //
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function roleDoc() {
+      return get(/databases/$(database)/documents/userRoles/$(request.auth.uid));
+    }
+
+    function hasRole(role) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/userRoles/$(request.auth.uid))
+        && roleDoc().data.active == true
+        && roleDoc().data.roles[role] == true;
+    }
+
+    function isAdmin() {
+      return hasRole('admin');
+    }
+
+    function isEditor() {
+      return hasRole('editor') || isAdmin();
+    }
+
+    function isEndUser() {
+      return hasRole('end_user') || isEditor();
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function allowed(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function required(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function unchanged(fields) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(fields);
+    }
+
+    function optionalString(data, field, max) {
+      return !(field in data) || data[field] == null || (data[field] is string && data[field].size() <= max);
+    }
+
+    function optionalTimestamp(data, field) {
+      return !(field in data) || data[field] == null || data[field] is timestamp;
+    }
+
+    function optionalList(data, field, max) {
+      return !(field in data) || (data[field] is list && data[field].size() <= max);
+    }
+
+    function validPriority(priority) {
+      return priority in ['blocker', 'high', 'medium', 'low'];
+    }
+
+    function validUserPrivate(data, uid) {
+      return allowed(['uid', 'email', 'display_name', 'photo_url', 'created_at', 'updated_at'])
+        && required(['uid', 'email', 'display_name', 'created_at', 'updated_at'])
+        && data.uid == uid
+        && data.email is string
+        && data.email.size() <= 320
+        && data.display_name is string
+        && data.display_name.size() > 0
+        && data.display_name.size() <= 120
+        && optionalString(data, 'photo_url', 2048)
+        && data.created_at is timestamp
+        && data.updated_at is timestamp;
+    }
+
+    function validUserPublic(data, uid) {
+      return allowed(['uid', 'display_name', 'photo_url'])
+        && required(['uid', 'display_name'])
+        && data.uid == uid
+        && data.display_name is string
+        && data.display_name.size() > 0
+        && data.display_name.size() <= 120
+        && optionalString(data, 'photo_url', 2048);
+    }
+
+    function validRolesMap(roles) {
+      return roles is map
+        && roles.keys().hasOnly(['end_user', 'editor', 'admin'])
+        && (!('end_user' in roles) || roles.end_user is bool)
+        && (!('editor' in roles) || roles.editor is bool)
+        && (!('admin' in roles) || roles.admin is bool);
+    }
+
+    function validUserRole(data, uid) {
+      return allowed(['uid', 'roles', 'active', 'created_at', 'updated_at'])
+        && required(['uid', 'roles', 'active', 'created_at', 'updated_at'])
+        && data.uid == uid
+        && validRolesMap(data.roles)
+        && data.active is bool
+        && data.created_at is timestamp
+        && data.updated_at is timestamp;
+    }
+
+    function validBook(data, workId) {
+      return allowed(['work_id', 'title_ar', 'title_id', 'status', 'default_edition', 'canonical_repo_path', 'updated_at'])
+        && required(['work_id', 'title_ar', 'title_id', 'status', 'default_edition', 'canonical_repo_path', 'updated_at'])
+        && data.work_id == workId
+        && data.title_ar is string
+        && data.title_ar.size() <= 240
+        && data.title_id is string
+        && data.title_id.size() <= 240
+        && data.status in ['raw_extraction', 'draft_extraction', 'draft', 'reviewed', 'published']
+        && data.default_edition is string
+        && data.default_edition.size() <= 80
+        && data.canonical_repo_path is string
+        && data.canonical_repo_path.size() <= 240
+        && data.updated_at is timestamp;
+    }
+
+    function validReviewTask(data) {
+      return allowed([
+          'schema_version', 'work_id', 'passage_id', 'task_type', 'priority', 'priority_rank',
+          'task_id', 'status', 'assigned_to', 'title', 'reason', 'recommended_action', 'section_path',
+          'source_citation_label', 'text_preview', 'source', 'created_by', 'created_at',
+          'updated_at', 'claimed_at', 'done_at'
+        ])
+        && required([
+          'schema_version', 'work_id', 'task_id', 'task_type', 'priority', 'priority_rank', 'status',
+          'title', 'reason', 'recommended_action', 'source', 'created_by', 'created_at',
+          'updated_at'
+        ])
+        && data.schema_version == '0.1'
+        && data.work_id is string
+        && data.work_id.size() <= 120
+        && data.task_id is string
+        && data.task_id.size() <= 180
+        && optionalString(data, 'passage_id', 80)
+        && data.task_type in [
+          'semantic_reference_review', 'cleaning_suspicious', 'toc_unmatched_heading',
+          'long_passage_review', 'short_passage_review', 'translation_warning',
+          'translation_qa', 'manual_review'
+        ]
+        && validPriority(data.priority)
+        && data.priority_rank is number
+        && data.priority_rank >= 0
+        && data.priority_rank <= 100
+        && data.status in ['open', 'claimed', 'in_review', 'blocked', 'done', 'cancelled']
+        && optionalString(data, 'assigned_to', 128)
+        && data.title is string
+        && data.title.size() > 0
+        && data.title.size() <= 180
+        && data.reason is string
+        && data.reason.size() <= 1200
+        && data.recommended_action is string
+        && data.recommended_action.size() <= 1200
+        && optionalList(data, 'section_path', 12)
+        && optionalString(data, 'source_citation_label', 400)
+        && optionalString(data, 'text_preview', 2500)
+        && data.source is map
+        && data.created_by is string
+        && data.created_by.size() <= 128
+        && data.created_at is timestamp
+        && data.updated_at is timestamp
+        && optionalTimestamp(data, 'claimed_at')
+        && optionalTimestamp(data, 'done_at');
+    }
+
+    function validRevision(data) {
+      return allowed([
+          'schema_version', 'work_id', 'passage_id', 'task_id', 'target', 'base_version',
+          'base_value', 'proposed_value', 'status', 'created_by', 'created_at', 'updated_at',
+          'submitted_at', 'reviewed_by', 'reviewed_at', 'admin_notes', 'editor_notes'
+        ])
+        && required([
+          'schema_version', 'work_id', 'passage_id', 'target', 'status', 'created_by',
+          'created_at', 'updated_at'
+        ])
+        && data.schema_version == '0.1'
+        && data.work_id is string
+        && data.work_id.size() <= 120
+        && data.passage_id is string
+        && data.passage_id.size() <= 80
+        && optionalString(data, 'task_id', 180)
+        && data.target in [
+          'passage.text', 'passage.section_path', 'passage.review_status',
+          'semantic.kind', 'semantic.role', 'semantic.layout', 'semantic.segment.ref',
+          'translation.text', 'translation.notes', 'translation.warnings',
+          'heading.title', 'toc.entry'
+        ]
+        && optionalString(data, 'base_version', 120)
+        && optionalString(data, 'base_value', 200000)
+        && optionalString(data, 'proposed_value', 200000)
+        && data.status in ['draft', 'submitted', 'approved', 'rejected', 'applied', 'superseded']
+        && data.created_by is string
+        && data.created_by.size() <= 128
+        && data.created_at is timestamp
+        && data.updated_at is timestamp
+        && optionalTimestamp(data, 'submitted_at')
+        && optionalString(data, 'reviewed_by', 128)
+        && optionalTimestamp(data, 'reviewed_at')
+        && optionalString(data, 'admin_notes', 4000)
+        && optionalString(data, 'editor_notes', 4000);
+    }
+
+    function validComment(data) {
+      return allowed([
+          'target_type', 'target_id', 'work_id', 'passage_id', 'body', 'status',
+          'created_by', 'created_at', 'updated_at'
+        ])
+        && required(['target_type', 'target_id', 'work_id', 'body', 'status', 'created_by', 'created_at', 'updated_at'])
+        && data.target_type in ['reviewTask', 'revision']
+        && data.target_id is string
+        && data.target_id.size() <= 180
+        && data.work_id is string
+        && data.work_id.size() <= 120
+        && optionalString(data, 'passage_id', 80)
+        && data.body is string
+        && data.body.size() > 0
+        && data.body.size() <= 8000
+        && data.status in ['active', 'resolved', 'hidden']
+        && data.created_by is string
+        && data.created_by.size() <= 128
+        && data.created_at is timestamp
+        && data.updated_at is timestamp;
+    }
+
+    function editorCanClaimTask() {
+      return isEditor()
+        && resource.data.status == 'open'
+        && request.resource.data.assigned_to == request.auth.uid
+        && request.resource.data.status in ['claimed', 'in_review']
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'assigned_to', 'status', 'claimed_at', 'updated_at'
+        ]);
+    }
+
+    function editorCanUpdateOwnRevision() {
+      return isEditor()
+        && resource.data.created_by == request.auth.uid
+        && resource.data.status in ['draft', 'submitted']
+        && request.resource.data.created_by == request.auth.uid
+        && request.resource.data.status in ['draft', 'submitted']
+        && unchanged([
+          'schema_version', 'work_id', 'passage_id', 'task_id', 'target',
+          'created_by', 'created_at', 'reviewed_by', 'reviewed_at', 'admin_notes'
+        ]);
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users_private/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && validUserPrivate(request.resource.data, uid);
+      allow update: if (isOwner(uid) || isAdmin())
+        && validUserPrivate(request.resource.data, uid)
+        && unchanged(['uid', 'created_at']);
+      allow delete: if isAdmin();
+    }
+
+    match /users_public/{uid} {
+      allow read: if signedIn();
+      allow create: if isOwner(uid) && validUserPublic(request.resource.data, uid);
+      allow update: if (isOwner(uid) || isAdmin())
+        && validUserPublic(request.resource.data, uid)
+        && unchanged(['uid']);
+      allow delete: if isAdmin();
+    }
+
+    match /userRoles/{uid} {
+      allow read: if isAdmin();
+      allow create: if isAdmin() && validUserRole(request.resource.data, uid);
+      allow update: if isAdmin()
+        && validUserRole(request.resource.data, uid)
+        && unchanged(['uid', 'created_at']);
+      allow delete: if isAdmin();
+    }
+
+    match /books/{workId} {
+      allow read: if isEndUser();
+      allow create: if isAdmin() && validBook(request.resource.data, workId);
+      allow update: if isAdmin() && validBook(request.resource.data, workId) && unchanged(['work_id']);
+      allow delete: if isAdmin();
+    }
+
+    match /reviewTasks/{taskId} {
+      allow read: if isEditor();
+      allow create: if isAdmin() && validReviewTask(request.resource.data);
+      allow update: if validReviewTask(request.resource.data)
+        && (isAdmin() || editorCanClaimTask());
+      allow delete: if isAdmin();
+    }
+
+    match /revisions/{revisionId} {
+      allow read: if isAdmin() || (isEditor() && resource.data.created_by == request.auth.uid);
+      allow create: if isEditor()
+        && validRevision(request.resource.data)
+        && request.resource.data.created_by == request.auth.uid
+        && request.resource.data.status in ['draft', 'submitted'];
+      allow update: if validRevision(request.resource.data)
+        && (isAdmin() || editorCanUpdateOwnRevision());
+      allow delete: if isAdmin();
+    }
+
+    match /comments/{commentId} {
+      allow read: if isEditor();
+      allow create: if isEditor()
+        && validComment(request.resource.data)
+        && request.resource.data.created_by == request.auth.uid;
+      allow update: if validComment(request.resource.data)
+        && (
+          isAdmin()
+          || (isEditor()
+            && resource.data.created_by == request.auth.uid
+            && request.resource.data.created_by == request.auth.uid
+            && unchanged(['target_type', 'target_id', 'work_id', 'passage_id', 'created_by', 'created_at'])
+          )
+        );
+      allow delete: if isAdmin();
+    }
+
+    match /auditLogs/{logId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -411,6 +411,17 @@
       "problemMatcher": []
     },
     {
+      "label": "Surau Editorial: Seed Afdhalush Review Tasks",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/seed_review_tasks.py",
+        "--book-dir",
+        "books/afdhalush-shalawat"
+      ],
+      "problemMatcher": []
+    },
+    {
       "label": "Surau QA: All Books",
       "type": "shell",
       "command": "python3",
