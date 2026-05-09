@@ -84,6 +84,19 @@ python3 scripts/merge_semantic_annotations.py \
   --book-dir books/afdhalush-shalawat
 ```
 
+Build a human review queue from validator warnings:
+
+```sh
+python3 scripts/build_semantic_review_queue.py \
+  --book-dir books/afdhalush-shalawat
+```
+
+Outputs:
+
+- `books/afdhalush-shalawat/annotations/semantic-review-queue.jsonl`
+- `reports/semantic-enrichment/afdhalush-shalawat-review-queue.md`
+- `reports/semantic-enrichment/afdhalush-shalawat-review-queue.html`
+
 After human review, approve non-failing warnings explicitly:
 
 ```sh

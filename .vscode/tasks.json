@@ -133,6 +133,17 @@
       "problemMatcher": []
     },
     {
+      "label": "Surau Review: Afdhalush Semantic Queue",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/build_semantic_review_queue.py",
+        "--book-dir",
+        "books/afdhalush-shalawat"
+      ],
+      "problemMatcher": []
+    },
+    {
       "label": "Surau Generate: Afdhalush V2 Enriched",
       "type": "shell",
       "command": "python3",

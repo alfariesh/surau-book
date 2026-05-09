@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "book_dir": "books/afdhalush-shalawat",
+  "proposals": "books/afdhalush-shalawat/annotations/semantic-llm-proposals.jsonl",
+  "validation": "reports/semantic-enrichment/afdhalush-shalawat-validation.json",
+  "count": 48,
+  "status_counts": {
+    "needs_review": 48
+  },
+  "severity_counts": {
+    "warn": 48
+  },
+  "issue_type_counts": {
+    "missing_reference": 48
+  },
+  "priority_counts": {
+    "high": 48
+  },
+  "segment_kind_counts": {
+    "ayah": 2,
+    "hadith": 46
+  },
+  "passage_count": 21
+}
