@@ -400,12 +400,15 @@ Create machine-draft translations from canonical Arabic passages:
 python3 scripts/translate_passages.py \
   --book-dir books/afdhalush-shalawat \
   --lang id \
-  --id ASH-00008,ASH-00009,ASH-00367
+  --id ASH-00008,ASH-00009,ASH-00033 \
+  --annotations annotations/semantic-reviewed.jsonl
 ```
 
 Keep provider credentials in environment variables such as `KILO_API_KEY`; do not store API tokens in repo files.
 
 By default, translation uses `passages.jsonl` for metadata/citation and overlays cleaner text from `clean/manuscript.md` by passage ID. This avoids translating raw extraction artifacts while keeping stable canonical IDs.
+
+It also reads `annotations/semantic-reviewed.jsonl` by default. That semantic layer helps the LLM handle ayah, hadith/report prose, salawat, du'a, and quote spans without making the Arabic source or public citation unstable.
 
 Default public API responses should expose the Arabic source citation even when the requested text language is a translation:
 

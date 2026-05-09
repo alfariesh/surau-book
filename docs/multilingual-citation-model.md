@@ -65,6 +65,7 @@ Translate from the canonical Arabic JSONL layer, not from Typst/PDF layout:
 
 ```text
 books/{work_id}/passages.jsonl + clean/manuscript.md
+  + annotations/semantic-reviewed.jsonl
 -> scripts/translate_passages.py
 -> books/{work_id}/translations/{lang}/passages.jsonl
 -> QA
@@ -72,6 +73,16 @@ books/{work_id}/passages.jsonl + clean/manuscript.md
 ```
 
 The script reads metadata, ordering, and citations from `passages.jsonl`, then overlays cleaner source text from `clean/manuscript.md` by passage ID when that file exists. Disable this with `--manuscript ""` if you intentionally want raw passage text.
+
+By default, the script also reads `annotations/semantic-reviewed.jsonl`. These annotations are not a second source text; they are guidance for the translator so ayah, hadith/report prose, du'a, salawat, quotes, and other semantic segments receive the right tone and boundaries. Disable this with `--annotations ""` if you need a plain translation test.
+
+Semantic guidance rules:
+
+- LLM may use `semantic_context` to understand what kind of passage it is translating.
+- LLM must not mention internal fields such as `kind`, `role`, `layout`, or `review_required`.
+- Qur'an candidates must be translated carefully without inventing a surah/ayah reference.
+- Hadith/report prose must not gain new takhrij, grading, isnad, or source claims.
+- Du'a/salawat should preserve devotional repetition and tone.
 
 Set the API key outside the repo:
 
@@ -85,17 +96,24 @@ Dry-run a small set:
 python3 scripts/translate_passages.py \
   --book-dir books/afdhalush-shalawat \
   --lang id \
-  --id ASH-00008,ASH-00009,ASH-00367 \
+  --id ASH-00008,ASH-00009,ASH-00033 \
+  --annotations annotations/semantic-reviewed.jsonl \
   --dry-run
 ```
 
-Run the live translation:
+Run a small live smoke translation:
 
 ```bash
 python3 scripts/translate_passages.py \
   --book-dir books/afdhalush-shalawat \
   --lang id \
-  --id ASH-00008,ASH-00009,ASH-00367
+  --id ASH-00008,ASH-00009,ASH-00033 \
+  --annotations annotations/semantic-reviewed.jsonl \
+  --model deepseek-v4-pro \
+  --timeout 75 \
+  --row-deadline 300 \
+  --retries 0 \
+  --continue-on-error
 ```
 
 Defaults:
@@ -107,6 +125,8 @@ Model: deepseek-v4-pro
 ```
 
 The script writes after each translated passage, so it can be resumed safely. Existing translations are skipped unless `--force` is passed.
+
+Use `--row-deadline` for batch runs so one slow passage does not stall the whole job. Use `--continue-on-error` when you want the script to keep saving successful rows and report failed IDs at the end of the terminal output.
 
 ## Translation Review Loop
 

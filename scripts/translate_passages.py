@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import re
+import signal
 import ssl
 import time
 import urllib.error
@@ -51,6 +52,10 @@ LANGUAGE_STYLE_RULES = {
         "Keep common Islamic terms when clearer than over-translation.",
     ],
 }
+
+
+class RowDeadlineExceeded(TimeoutError):
+    pass
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -208,6 +213,107 @@ def select_rows(
     return selected
 
 
+def load_annotations(path: Path | None) -> dict[str, dict[str, Any]]:
+    if path is None:
+        return {}
+    if not path.exists():
+        raise SystemExit(f"Annotation file not found: {path}")
+    return {
+        row["id"]: row
+        for row in read_jsonl(path)
+        if isinstance(row, dict) and row.get("id")
+    }
+
+
+def resolve_book_path(book_dir: Path, value: str | None) -> Path | None:
+    if not value:
+        return None
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return book_dir / path
+
+
+def truncate(text: str, limit: int = 360) -> str:
+    text = " ".join(str(text or "").split())
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "..."
+
+
+def semantic_context(annotation: dict[str, Any] | None) -> dict[str, Any]:
+    if not annotation:
+        return {}
+
+    proposal = annotation.get("llm_proposal")
+    proposal = proposal if isinstance(proposal, dict) else {}
+    segments = proposal.get("segments") if isinstance(proposal.get("segments"), list) else []
+    clean_segments = []
+    for segment in segments:
+        if not isinstance(segment, dict):
+            continue
+        source_span = segment.get("source_span")
+        source_span = source_span if isinstance(source_span, dict) else {}
+        clean_segments.append(
+            {
+                "span_id": segment.get("span_id") or source_span.get("span_id"),
+                "kind": segment.get("kind"),
+                "ref": segment.get("ref") or "",
+                "review_required": bool(segment.get("review_required")),
+                "source_span": {
+                    key: source_span.get(key)
+                    for key in ("start", "end", "reason")
+                    if source_span.get(key) is not None
+                },
+                "text_preview": truncate(segment.get("text") or "", 120),
+            }
+        )
+
+    context = {
+        "kind": annotation.get("kind"),
+        "role": annotation.get("role"),
+        "layout": annotation.get("layout"),
+        "status": annotation.get("status"),
+        "review_decision": annotation.get("review_decision"),
+        "segment_count": len(clean_segments),
+        "segments": clean_segments,
+        "has_review_notes": bool(proposal.get("review_notes")),
+    }
+    return {key: value for key, value in context.items() if value not in (None, "", [], {})}
+
+
+def translation_guidance_from_semantics(context: dict[str, Any]) -> list[str]:
+    if not context:
+        return []
+
+    segment_kinds = {
+        segment.get("kind")
+        for segment in context.get("segments", [])
+        if isinstance(segment, dict) and segment.get("kind")
+    }
+    guidance = [
+        "Use the semantic_context only as translation guidance; do not add it as commentary.",
+        "Do not translate or mention internal fields such as kind, role, layout, span_id, or review_required.",
+    ]
+    if "ayah" in segment_kinds:
+        guidance.append(
+            "For Qur'an segments, translate the meaning carefully and do not assert a surah/ayah reference unless it is explicitly reviewed in the source metadata."
+        )
+    if "hadith" in segment_kinds:
+        guidance.append(
+            "For hadith/report segments, translate the source wording only; do not add takhrij, grading, isnad claims, or source claims that are not in the Arabic."
+        )
+    if any(segment.get("review_required") for segment in context.get("segments", []) if isinstance(segment, dict)):
+        guidance.append(
+            "If a source phrase looks damaged or OCR-corrupted, do not silently reconstruct it from memory; translate the visible wording as faithfully as possible and put uncertainty in warnings."
+        )
+    if "dua" in segment_kinds or context.get("role") == "matn":
+        guidance.append("For du'a or salawat, preserve devotional tone and repeated invocations.")
+    if "quote" in segment_kinds or context.get("role") == "quote":
+        guidance.append("For quoted scholarly material, preserve attribution if it appears in the Arabic text.")
+    return guidance
+
+
 def ensure_translation_yml(
     path: Path,
     book: dict[str, Any],
@@ -215,9 +321,7 @@ def ensure_translation_yml(
     source_path: Path,
     model: str,
 ) -> None:
-    if path.exists():
-        return
-    data = {
+    defaults = {
         "schema_version": 0.1,
         "work_id": book.get("id"),
         "lang": lang,
@@ -229,13 +333,29 @@ def ensure_translation_yml(
         "citation_policy": "cite_source_passage",
         "model": model,
     }
+    data = load_yaml(path) if path.exists() else {}
+    changed = not path.exists()
+    for key, value in defaults.items():
+        if key not in data:
+            data[key] = value
+            changed = True
+    if data.get("model") != model:
+        data["model"] = model
+        changed = True
+    if not changed:
+        return
     write_yaml(path, data)
 
 
-def build_messages(row: dict[str, Any], target_lang: str) -> list[dict[str, str]]:
+def build_messages(
+    row: dict[str, Any],
+    target_lang: str,
+    annotation: dict[str, Any] | None = None,
+) -> list[dict[str, str]]:
     target_name = LANGUAGE_NAMES.get(target_lang, target_lang)
     section_path = " > ".join(row.get("section_path") or [])
     citation = (row.get("citation") or {}).get("label") or ""
+    semantics = semantic_context(annotation)
     style_rules = LANGUAGE_STYLE_RULES.get(
         target_lang,
         [f"Use natural {target_name} suitable for Islamic learning materials."],
@@ -261,12 +381,14 @@ def build_messages(row: dict[str, Any], target_lang: str) -> list[dict[str, str]
             "Keep honorifics concise and respectful.",
             "For salawat/du'a passages, preserve devotional tone.",
             "Do not omit repeated phrases unless the source repeats them.",
+            *translation_guidance_from_semantics(semantics),
         ],
         "metadata": {
             "id": row.get("id"),
             "section_path": section_path,
             "citation": citation,
         },
+        "semantic_context": semantics,
         "arabic_text": row.get("text") or "",
     }
     return [
@@ -342,6 +464,23 @@ def call_llm(
     raise RuntimeError(last_error or "LLM call failed")
 
 
+def call_llm_with_deadline(deadline: float, *args: Any, **kwargs: Any) -> dict[str, Any]:
+    if deadline <= 0:
+        return call_llm(*args, **kwargs)
+
+    def handle_timeout(signum: int, frame: Any) -> None:
+        raise RowDeadlineExceeded(f"row deadline exceeded after {deadline:g}s")
+
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    signal.signal(signal.SIGALRM, handle_timeout)
+    signal.setitimer(signal.ITIMER_REAL, deadline)
+    try:
+        return call_llm(*args, **kwargs)
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous_handler)
+
+
 def make_translation_row(
     source_row: dict[str, Any],
     lang: str,
@@ -351,8 +490,10 @@ def make_translation_row(
     warnings: list[Any],
     status: str,
     translator: str,
+    annotation: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     source_id = source_row["id"]
+    semantics = semantic_context(annotation)
     return {
         "id": f"{source_id}.{lang}",
         "work_id": source_row.get("work_id"),
@@ -367,6 +508,7 @@ def make_translation_row(
         "translation_type": "meaning",
         "translator": translator,
         "model": model,
+        "semantic_context": semantics,
         "text": translation.strip(),
         "notes": notes if isinstance(notes, list) else [],
         "warnings": warnings if isinstance(warnings, list) else [],
@@ -378,6 +520,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--book-dir", required=True, type=Path)
     parser.add_argument("--lang", default="id")
     parser.add_argument("--source", default="passages.jsonl")
+    parser.add_argument(
+        "--annotations",
+        default="annotations/semantic-reviewed.jsonl",
+        help="Optional semantic annotation JSONL path relative to --book-dir. Pass an empty string to disable.",
+    )
     parser.add_argument(
         "--manuscript",
         default="clean/manuscript.md",
@@ -395,8 +542,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--timeout", type=float, default=90)
+    parser.add_argument("--row-deadline", type=float, default=0)
     parser.add_argument("--retries", type=int, default=2)
     parser.add_argument("--ca-bundle", help="Optional CA bundle path. Defaults to certifi when installed.")
+    parser.add_argument("--continue-on-error", action="store_true")
     parser.add_argument("--status", default="machine_draft")
     parser.add_argument("--translator", default="Surau LLM Draft")
     return parser.parse_args()
@@ -411,6 +560,7 @@ def main() -> None:
     translation_yml = book_dir / (
         args.translation_yml or f"translations/{args.lang}/translation.yml"
     )
+    annotations = load_annotations(resolve_book_path(book_dir, args.annotations))
 
     source_rows = read_jsonl(source_path)
     overlay_count = 0
@@ -433,10 +583,16 @@ def main() -> None:
     if args.dry_run:
         print(
             f"selected={len(selected)} todo={len(todo)} existing={len(existing_rows)} "
-            f"text_overlay={overlay_count}"
+            f"text_overlay={overlay_count} annotations={len(annotations)}"
         )
         for row in todo[:10]:
-            print(f"- {row.get('id')}: {(row.get('text') or '')[:80]}")
+            context = semantic_context(annotations.get(row.get("id", "")))
+            kinds = [
+                segment.get("kind")
+                for segment in context.get("segments", [])
+                if isinstance(segment, dict) and segment.get("kind")
+            ]
+            print(f"- {row.get('id')}: semantic={context.get('kind')} segments={kinds} {(row.get('text') or '')[:80]}")
         return
 
     ensure_translation_yml(translation_yml, book, args.lang, source_path, args.model)
@@ -450,32 +606,40 @@ def main() -> None:
 
     for index, row in enumerate(todo, start=1):
         pid = row["id"]
-        print(f"[{index}/{len(todo)}] translating {pid}")
-        result = call_llm(
-            args.api_base,
-            api_key,
-            args.model,
-            build_messages(row, args.lang),
-            args.temperature,
-            args.timeout,
-            args.retries,
-            args.ca_bundle,
-        )
-        translation = str(result.get("translation") or "").strip()
-        if not translation:
-            raise SystemExit(f"Empty translation for {pid}: {result}")
-        output_by_source[pid] = make_translation_row(
-            row,
-            args.lang,
-            args.model,
-            translation,
-            result.get("notes") or [],
-            result.get("warnings") or [],
-            args.status,
-            args.translator,
-        )
-        ordered = [output_by_source[pid] for pid in source_order if pid in output_by_source]
-        write_jsonl(out_path, ordered)
+        annotation = annotations.get(pid)
+        print(f"[{index}/{len(todo)}] translating {pid}", flush=True)
+        try:
+            result = call_llm_with_deadline(
+                args.row_deadline,
+                args.api_base,
+                api_key,
+                args.model,
+                build_messages(row, args.lang, annotation),
+                args.temperature,
+                args.timeout,
+                args.retries,
+                args.ca_bundle,
+            )
+            translation = str(result.get("translation") or "").strip()
+            if not translation:
+                raise RuntimeError(f"Empty translation for {pid}: {result}")
+            output_by_source[pid] = make_translation_row(
+                row,
+                args.lang,
+                args.model,
+                translation,
+                result.get("notes") or [],
+                result.get("warnings") or [],
+                args.status,
+                args.translator,
+                annotation,
+            )
+            ordered = [output_by_source[pid] for pid in source_order if pid in output_by_source]
+            write_jsonl(out_path, ordered)
+        except Exception as exc:
+            if not args.continue_on_error:
+                raise
+            print(f"[{index}/{len(todo)}] {pid}: error: {exc}", flush=True)
 
     print(f"ok: wrote {out_path} rows={len(output_by_source)}")
 

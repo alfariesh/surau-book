@@ -329,8 +329,36 @@
         "--lang",
         "id",
         "--id",
-        "ASH-00008,ASH-00009,ASH-00367",
+        "ASH-00008,ASH-00009,ASH-00033",
+        "--annotations",
+        "annotations/semantic-reviewed.jsonl",
         "--dry-run"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Surau Translate: Afdhalush ID Semantic Smoke",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "scripts/translate_passages.py",
+        "--book-dir",
+        "books/afdhalush-shalawat",
+        "--lang",
+        "id",
+        "--id",
+        "ASH-00008,ASH-00009,ASH-00033",
+        "--annotations",
+        "annotations/semantic-reviewed.jsonl",
+        "--model",
+        "deepseek-v4-pro",
+        "--timeout",
+        "75",
+        "--row-deadline",
+        "300",
+        "--retries",
+        "0",
+        "--continue-on-error"
       ],
       "problemMatcher": []
     },
@@ -345,7 +373,9 @@
         "--lang",
         "en",
         "--id",
-        "ASH-00008,ASH-00009,ASH-00367",
+        "ASH-00008,ASH-00009,ASH-00033",
+        "--annotations",
+        "annotations/semantic-reviewed.jsonl",
         "--dry-run"
       ],
       "problemMatcher": []

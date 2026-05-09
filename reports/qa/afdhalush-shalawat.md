@@ -143,7 +143,7 @@ _None._
 | Lang | Rows | Sources Covered | Source Total | Invalid Sources | Duplicate IDs | Missing Text | Sources Without Citation | Missing Metadata | Bad Status | Arabic Leak | Ratio Outliers | Citation Drift |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | en | 1 | 1 | 1768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| id | 1 | 1 | 1768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| id | 3 | 3 | 1768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Problem Pages
 

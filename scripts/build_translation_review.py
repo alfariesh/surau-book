@@ -379,7 +379,11 @@ def render_markdown(
                 "python3 scripts/translate_passages.py \\",
                 f"  --book-dir {packet['book_dir']} \\",
                 f"  --lang {lang} \\",
-                f"  --id {','.join(missing)}",
+                f"  --id {','.join(missing)} \\",
+                "  --annotations annotations/semantic-reviewed.jsonl \\",
+                "  --model deepseek-v4-pro \\",
+                "  --row-deadline 300 \\",
+                "  --continue-on-error",
                 "```",
                 "",
             ]

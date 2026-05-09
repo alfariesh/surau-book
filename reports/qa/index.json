@@ -155,11 +155,11 @@
           "translator": "Surau LLM Draft",
           "translation_type": "meaning",
           "citation_policy": "cite_source_passage",
-          "model": "google/gemini-3.1-flash-lite-preview"
+          "model": "deepseek-v4-pro"
         },
-        "count": 1,
+        "count": 3,
         "source_coverage": {
-          "translated": 1,
+          "translated": 3,
           "source_total": 1768
         },
         "json_errors": [],

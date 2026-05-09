@@ -1,0 +1,137 @@
+{
+  "schema_version": 0.1,
+  "book_id": "afdhalush-shalawat",
+  "book_dir": "books/afdhalush-shalawat",
+  "source": "books/afdhalush-shalawat/passages.jsonl",
+  "langs": [
+    "id",
+    "en"
+  ],
+  "count": 3,
+  "ids": [
+    "ASH-00008",
+    "ASH-00009",
+    "ASH-00033"
+  ],
+  "missing_by_lang": {
+    "id": [],
+    "en": [
+      "ASH-00009",
+      "ASH-00033"
+    ]
+  },
+  "items": [
+    {
+      "id": "ASH-00008",
+      "sequence": 8,
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00008.",
+      "source_length": 24,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "manual"
+      ],
+      "reasons": [
+        "selected with --id"
+      ],
+      "translations": {
+        "id": {
+          "status": "machine_draft",
+          "model": "deepseek-v4-pro",
+          "target_len": 57,
+          "ratio": 2.38,
+          "arabic_leak": 0,
+          "warnings": [],
+          "notes": []
+        },
+        "en": {
+          "status": "machine_draft",
+          "model": "deepseek-v4-pro",
+          "target_len": 59,
+          "ratio": 2.46,
+          "arabic_leak": 0,
+          "warnings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "id": "ASH-00009",
+      "sequence": 9,
+      "section_path": [
+        "مقدمة"
+      ],
+      "source_page": 7,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 6, ASH-00009.",
+      "source_length": 868,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "manual"
+      ],
+      "reasons": [
+        "selected with --id"
+      ],
+      "translations": {
+        "id": {
+          "status": "machine_draft",
+          "model": "deepseek-v4-pro",
+          "target_len": 1695,
+          "ratio": 1.95,
+          "arabic_leak": 0,
+          "warnings": [
+            "Teks asli berakhir dengan koma, menandakan kalimat belum selesai."
+          ],
+          "notes": []
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    },
+    {
+      "id": "ASH-00033",
+      "sequence": 33,
+      "section_path": [
+        "القسم الأول",
+        "الفصل الثاني: في الأحاديث التي ورد فيها الترغيب في الصلاة عليه صلى الله عليه وسلم"
+      ],
+      "source_page": 13,
+      "citation": "Afdhalush Shalawat, ed. surau-v0, hlm. 13, ASH-00033.",
+      "source_length": 1642,
+      "source_text": "books/afdhalush-shalawat/clean/manuscript.md",
+      "categories": [
+        "manual"
+      ],
+      "reasons": [
+        "selected with --id"
+      ],
+      "translations": {
+        "id": {
+          "status": "machine_draft",
+          "model": "deepseek-v4-pro",
+          "target_len": 2639,
+          "ratio": 1.61,
+          "arabic_leak": 0,
+          "warnings": [
+            "Teks pada hadis ke-10 dan ke-11 tampak rusak atau tidak lengkap, sehingga terjemahan didasarkan pada teks yang terlihat."
+          ],
+          "notes": [
+            "Pada hadis kedua, kata 'zakat' di sini bermakna penyuci atau pembersih, bukan zakat wajib."
+          ]
+        },
+        "en": {
+          "status": "missing",
+          "target_len": 0,
+          "ratio": null,
+          "arabic_leak": 0
+        }
+      }
+    }
+  ]
+}

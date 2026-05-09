@@ -7,4 +7,4 @@ status: machine_draft
 translator: Surau LLM Draft
 translation_type: meaning
 citation_policy: cite_source_passage
-model: google/gemini-3.1-flash-lite-preview
+model: deepseek-v4-pro
