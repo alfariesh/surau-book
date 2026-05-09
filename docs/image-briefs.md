@@ -1,8 +1,12 @@
 # Image Briefs
 
+Status: `parked_experimental`
+
 Image briefs are a reviewable visual-planning layer for chapter separators and other non-canonical book design assets.
 
 They do not change Arabic text, passage IDs, citations, semantic annotations, or translations. They only describe what kind of image could be generated or sourced later.
+
+This layer is intentionally parked for now. Keep it as a future enhancement note; do not generate image assets or wire images into Typst editions until the core kitab-processing workflow, editorial review, citation, translation, and API work are stable.
 
 ## Flow
 
@@ -12,8 +16,7 @@ clean/manuscript.md
   + semantic annotations
   -> image-briefs.jsonl
   -> human review
-  -> generated/sourced assets
-  -> Typst chapter separator
+  -> parked until visual direction is approved
 ```
 
 ## File Location
@@ -27,6 +30,8 @@ Generated assets should later live under:
 ```text
 books/{work_id}/assets/images/
 ```
+
+Do not create or commit generated image assets during the current core-processing phase.
 
 ## Row Shape
 
@@ -48,6 +53,7 @@ books/{work_id}/assets/images/
   "prompt": "English image-generation prompt...",
   "negative_prompt": "No depiction of Prophet Muhammad, companions, angels...",
   "status": "draft",
+  "pipeline_status": "parked_experimental",
   "review_required": true,
   "safety_notes": [
     "Prompt must not ask for depictions of prophets, companions, angels, divine beings, heaven, or hell."
@@ -81,6 +87,8 @@ Avoid:
 
 ## Placement Policy
 
+Current policy: no active placement in generated editions.
+
 Start with chapter separators only:
 
 ```text
@@ -110,3 +118,5 @@ rejected    should not be used
 ```
 
 Only `approved` image assets should be included in a published print edition.
+
+For now, keep all rows as `draft` or `parked`. The active pipeline should ignore image briefs.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draft English image-generation briefs for Surau chapter separators."""
+"""Draft parked English image brief notes for possible future chapter separators."""
 
 from __future__ import annotations
 
@@ -278,9 +278,11 @@ def build_brief(
         "prompt": prompt,
         "negative_prompt": negative_prompt,
         "status": "draft",
+        "pipeline_status": "parked_experimental",
         "review_required": True,
         "safety_notes": [
             "Prompt is visual planning only; it does not change canonical Arabic text or citation.",
+            "This visual layer is parked; do not generate or wire image assets into active Typst builds yet.",
             "Do not generate depictions of prophets, companions, angels, divine beings, heaven, hell, or unseen realities.",
             "Do not ask the image model to render Arabic text; add reviewed typography later in Typst.",
         ],
@@ -293,10 +295,10 @@ def render_markdown(book: dict[str, Any], rows: list[dict[str, Any]]) -> str:
     lines = [
         f"# Image Brief Review: {book.get('title_id') or book.get('id')}",
         "",
-        "These are English draft prompts for chapter separator images. They are not final assets.",
+        "These are parked English draft prompts for possible future chapter separator images. They are not active layout inputs and are not final assets.",
         "",
-        "| ID | Level | Section | Theme | Passages | Status |",
-        "| --- | --- | --- | --- | --- | --- |",
+        "| ID | Level | Section | Theme | Passages | Status | Pipeline |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         lines.append(
@@ -309,6 +311,7 @@ def render_markdown(book: dict[str, Any], rows: list[dict[str, Any]]) -> str:
                     f"`{row.get('style_preset')}`",
                     str(row.get("passage_count") or len(row.get("related_passage_ids") or [])),
                     f"`{row.get('status')}`",
+                    f"`{row.get('pipeline_status')}`",
                 ]
             )
             + " |"

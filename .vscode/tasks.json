@@ -396,7 +396,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Surau Images: Afdhalush Briefs",
+      "label": "Surau Images: Afdhalush Briefs (Parked)",
       "type": "shell",
       "command": "python3",
       "args": [

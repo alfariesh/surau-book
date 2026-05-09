@@ -28,7 +28,8 @@ clean/manuscript.md
 
 Illustration proposals should become reviewable image briefs, not immediate
 image assets. See `docs/image-briefs.md` and
-`scripts/build_image_briefs.py`.
+`scripts/build_image_briefs.py`. This visual layer is currently parked and
+should not drive active Typst builds.
 
 ## What the LLM must not do
 

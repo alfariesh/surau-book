@@ -1,93 +1,93 @@
 # Image Brief Review: Afdhalush Shalawat
 
-These are English draft prompts for chapter separator images. They are not final assets.
+These are parked English draft prompts for possible future chapter separator images. They are not active layout inputs and are not final assets.
 
-| ID | Level | Section | Theme | Passages | Status |
-| --- | --- | --- | --- | --- | --- |
-| `ASH-IMG-0001` | 1 | عن المؤلف | `biographical_preface` | 7 | `draft` |
-| `ASH-IMG-0002` | 1 | مقدمة | `opening_invocation` | 3 | `draft` |
-| `ASH-IMG-0003` | 1 | القسم الأول | `book_structure` | 2 | `draft` |
-| `ASH-IMG-0004` | 1 | القسم الأول | `book_structure` | 5 | `draft` |
-| `ASH-IMG-0005` | 2 | القسم الأول > الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي | `quranic_reflection` | 14 | `draft` |
-| `ASH-IMG-0006` | 2 | القسم الأول > الفصل الثاني: في الأحاديث التي ورد فيها الترغيب في الصلاة عليه صلى الله علي… | `hadith_transmission` | 10 | `draft` |
-| `ASH-IMG-0007` | 2 | القسم الأول > الفصل الثالث: في الأحاديث التي ورد فيها الحث على الصلاة عليه صلى الله عليه… | `friday_salawat` | 4 | `draft` |
-| `ASH-IMG-0008` | 2 | القسم الأول > الفصل الرابع في الأحاديث التي ورد فيها الترغيب في الإكثار من الصلاة عليه صل… | `hadith_transmission` | 26 | `draft` |
-| `ASH-IMG-0009` | 2 | القسم الأول > الفصل الخامس في الأحاديث الواردة فيها ذكر شفاعته صلى الله عليه وسلم لمن يصل… | `hope_and_intercession` | 18 | `draft` |
-| `ASH-IMG-0010` | 2 | القسم الأول > لفصل السادس في الأحاديث التي ورد فيها التحذير من ترك الصلاة عليه عند ذكره ص… | `serious_admonition` | 17 | `draft` |
-| `ASH-IMG-0011` | 2 | القسم الأول > الفصل السابع في بيان الفوائد الجمة والمنافع المهمة التي تحصل في الدنيا والآ… | `benefits_and_fruits` | 48 | `draft` |
-| `ASH-IMG-0012` | 1 | القسم الثاني | `book_structure` | 1 | `draft` |
-| `ASH-IMG-0013` | 2 | القسم الثاني > الصلاة الأولى الإبراهيمية | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0014` | 2 | القسم الثاني > الصلاة الثانية | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0015` | 2 | القسم الثاني > الصلاة الثالثة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0016` | 2 | القسم الثاني > الصلاة الرابعة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0017` | 2 | القسم الثاني > الصلاة الخامسة | `salawat_formula` | 5 | `draft` |
-| `ASH-IMG-0018` | 2 | القسم الثاني > الصلاة الثامنة | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0019` | 2 | القسم الثاني > الصلاة التاسعة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0020` | 2 | القسم الثاني > الصلاة العاشرة | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0021` | 2 | القسم الثاني > الصلاة الحادية عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0022` | 2 | القسم الثاني > الصلاة الثانية عشر | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0023` | 2 | القسم الثاني > الصلاة الثالثة عشرة | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0024` | 2 | القسم الثاني > الصلاة الرابعة عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0025` | 2 | القسم الثاني > الصلاة الخامسة عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0026` | 2 | القسم الثاني > الصلاة السادسة عشرة | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0027` | 2 | القسم الثاني > الصلاة السابعة عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0028` | 2 | القسم الثاني > الصلاة الثامنة عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0029` | 2 | القسم الثاني > الصلاة التاسعة عشرة | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0030` | 2 | القسم الثاني > الصلاة العشرون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0031` | 2 | القسم الثاني > الصلاة الحادية والعشرون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0032` | 2 | القسم الثاني > الصلاة الثانية والعشرون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0033` | 2 | القسم الثاني > الصلاة الثالثة والعشرون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0034` | 2 | القسم الثاني > الصلاة الرابعة والعشرون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0035` | 2 | القسم الثاني > الصلاة الخامسة والعشرون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0036` | 2 | القسم الثاني > الصلاة السادسة والعشرون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0037` | 2 | القسم الثاني > الصلاة السابعة والعشرون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0038` | 2 | القسم الثاني > الصلاة الثامنة والعشرون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0039` | 2 | القسم الثاني > الصلاة التاسعة والعشرون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0040` | 2 | القسم الثاني > الصلاة الثلاثون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0041` | 2 | القسم الثاني > الصلاة الحادية والثلاثون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0042` | 2 | القسم الثاني > الصلاة الثانية والثلاثون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0043` | 2 | القسم الثاني > الصلاة الثالثة والثلاثون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0044` | 2 | القسم الثاني > الصلاة الرابعة والثلاثون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0045` | 2 | القسم الثاني > الصلاة الخامسة والثلاثون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0046` | 2 | القسم الثاني > الصلاة السادسة والثلاثون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0047` | 2 | القسم الثاني > الصلاة السابعة والثلاثون | `salawat_formula` | 6 | `draft` |
-| `ASH-IMG-0048` | 2 | القسم الثاني > الصلاة الثامنة والثلاثون | `salawat_formula` | 5 | `draft` |
-| `ASH-IMG-0049` | 2 | القسم الثاني > الصلاة التاسعة والثلاثون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0050` | 2 | القسم الثاني > الصلاة الأربعون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0051` | 2 | القسم الثاني > الصلاة الحادية والأربعون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0052` | 2 | القسم الثاني > الصلاة الثانية والأربعون | `salawat_formula` | 14 | `draft` |
-| `ASH-IMG-0053` | 2 | القسم الثاني > الصلاة الثالثة والأربعون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0054` | 2 | القسم الثاني > الصلاة الرابعة والأربعون | `salawat_formula` | 12 | `draft` |
-| `ASH-IMG-0055` | 2 | القسم الثاني > الصلاة السادسة والأربعون | `salawat_formula` | 10 | `draft` |
-| `ASH-IMG-0056` | 2 | القسم الثاني > الصلاة السابعة والأربعون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0057` | 2 | القسم الثاني > الصلاة الثامنة والأربعون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0058` | 2 | القسم الثاني > الصلاة التاسعة والأربعون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0059` | 2 | القسم الثاني > الصلاة الخمسون | `salawat_formula` | 14 | `draft` |
-| `ASH-IMG-0060` | 2 | القسم الثاني > الصلاة الثانية والخمسون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0061` | 2 | القسم الثاني > الصلاة الثالثة والخمسون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0062` | 2 | القسم الثاني > الصلاة الرابعة والخمسون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0063` | 2 | القسم الثاني > الصلاة الخامسة والخمسون | `salawat_formula` | 3 | `draft` |
-| `ASH-IMG-0064` | 2 | القسم الثاني > الصلاة السادسة والخمسون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0065` | 2 | القسم الثاني > الصلاة السابعة والخمسون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0066` | 2 | القسم الثاني > الصلاة الثامنة والخمسون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0067` | 2 | القسم الثاني > الصلاة التاسعة والخمسون | `salawat_formula` | 5 | `draft` |
-| `ASH-IMG-0068` | 2 | القسم الثاني > الصلاة الستون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0069` | 2 | القسم الثاني > الصلاة الحادية والستون | `salawat_formula` | 8 | `draft` |
-| `ASH-IMG-0070` | 2 | القسم الثاني > الصلاة الثالثة والستون | `salawat_formula` | 4 | `draft` |
-| `ASH-IMG-0071` | 2 | القسم الثاني > الصلاة الرابعة والستون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0072` | 2 | القسم الثاني > الصلاة الخامسة والستون | `salawat_formula` | 2 | `draft` |
-| `ASH-IMG-0073` | 2 | القسم الثاني > الصلاة السادسة والستون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0074` | 2 | القسم الثاني > الصلاة السابعة والستون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0075` | 2 | القسم الثاني > الصلاة الثامنة والستون | `salawat_formula` | 1 | `draft` |
-| `ASH-IMG-0076` | 2 | القسم الثاني > الصلاة التاسعة والستون | `salawat_formula` | 17 | `draft` |
-| `ASH-IMG-0077` | 1 | الخاتمة في سبع قصائد فرائد | `modern_turath` | 3 | `draft` |
-| `ASH-IMG-0078` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الأولى | `poetic_closing` | 199 | `draft` |
-| `ASH-IMG-0079` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الثانية | `poetic_closing` | 192 | `draft` |
-| `ASH-IMG-0080` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الثالثة | `poetic_closing` | 201 | `draft` |
-| `ASH-IMG-0081` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الرابعة | `poetic_closing` | 201 | `draft` |
-| `ASH-IMG-0082` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الخامسة | `poetic_closing` | 185 | `draft` |
-| `ASH-IMG-0083` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة السادسة | `poetic_closing` | 199 | `draft` |
-| `ASH-IMG-0084` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة السابعة | `poetic_closing` | 212 | `draft` |
+| ID | Level | Section | Theme | Passages | Status | Pipeline |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ASH-IMG-0001` | 1 | عن المؤلف | `biographical_preface` | 7 | `draft` | `parked_experimental` |
+| `ASH-IMG-0002` | 1 | مقدمة | `opening_invocation` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0003` | 1 | القسم الأول | `book_structure` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0004` | 1 | القسم الأول | `book_structure` | 5 | `draft` | `parked_experimental` |
+| `ASH-IMG-0005` | 2 | القسم الأول > الفصل الأول: في تفسير آية إن الله وملائكته يصلون على النبي | `quranic_reflection` | 14 | `draft` | `parked_experimental` |
+| `ASH-IMG-0006` | 2 | القسم الأول > الفصل الثاني: في الأحاديث التي ورد فيها الترغيب في الصلاة عليه صلى الله علي… | `hadith_transmission` | 10 | `draft` | `parked_experimental` |
+| `ASH-IMG-0007` | 2 | القسم الأول > الفصل الثالث: في الأحاديث التي ورد فيها الحث على الصلاة عليه صلى الله عليه… | `friday_salawat` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0008` | 2 | القسم الأول > الفصل الرابع في الأحاديث التي ورد فيها الترغيب في الإكثار من الصلاة عليه صل… | `hadith_transmission` | 26 | `draft` | `parked_experimental` |
+| `ASH-IMG-0009` | 2 | القسم الأول > الفصل الخامس في الأحاديث الواردة فيها ذكر شفاعته صلى الله عليه وسلم لمن يصل… | `hope_and_intercession` | 18 | `draft` | `parked_experimental` |
+| `ASH-IMG-0010` | 2 | القسم الأول > لفصل السادس في الأحاديث التي ورد فيها التحذير من ترك الصلاة عليه عند ذكره ص… | `serious_admonition` | 17 | `draft` | `parked_experimental` |
+| `ASH-IMG-0011` | 2 | القسم الأول > الفصل السابع في بيان الفوائد الجمة والمنافع المهمة التي تحصل في الدنيا والآ… | `benefits_and_fruits` | 48 | `draft` | `parked_experimental` |
+| `ASH-IMG-0012` | 1 | القسم الثاني | `book_structure` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0013` | 2 | القسم الثاني > الصلاة الأولى الإبراهيمية | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0014` | 2 | القسم الثاني > الصلاة الثانية | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0015` | 2 | القسم الثاني > الصلاة الثالثة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0016` | 2 | القسم الثاني > الصلاة الرابعة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0017` | 2 | القسم الثاني > الصلاة الخامسة | `salawat_formula` | 5 | `draft` | `parked_experimental` |
+| `ASH-IMG-0018` | 2 | القسم الثاني > الصلاة الثامنة | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0019` | 2 | القسم الثاني > الصلاة التاسعة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0020` | 2 | القسم الثاني > الصلاة العاشرة | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0021` | 2 | القسم الثاني > الصلاة الحادية عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0022` | 2 | القسم الثاني > الصلاة الثانية عشر | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0023` | 2 | القسم الثاني > الصلاة الثالثة عشرة | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0024` | 2 | القسم الثاني > الصلاة الرابعة عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0025` | 2 | القسم الثاني > الصلاة الخامسة عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0026` | 2 | القسم الثاني > الصلاة السادسة عشرة | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0027` | 2 | القسم الثاني > الصلاة السابعة عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0028` | 2 | القسم الثاني > الصلاة الثامنة عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0029` | 2 | القسم الثاني > الصلاة التاسعة عشرة | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0030` | 2 | القسم الثاني > الصلاة العشرون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0031` | 2 | القسم الثاني > الصلاة الحادية والعشرون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0032` | 2 | القسم الثاني > الصلاة الثانية والعشرون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0033` | 2 | القسم الثاني > الصلاة الثالثة والعشرون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0034` | 2 | القسم الثاني > الصلاة الرابعة والعشرون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0035` | 2 | القسم الثاني > الصلاة الخامسة والعشرون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0036` | 2 | القسم الثاني > الصلاة السادسة والعشرون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0037` | 2 | القسم الثاني > الصلاة السابعة والعشرون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0038` | 2 | القسم الثاني > الصلاة الثامنة والعشرون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0039` | 2 | القسم الثاني > الصلاة التاسعة والعشرون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0040` | 2 | القسم الثاني > الصلاة الثلاثون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0041` | 2 | القسم الثاني > الصلاة الحادية والثلاثون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0042` | 2 | القسم الثاني > الصلاة الثانية والثلاثون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0043` | 2 | القسم الثاني > الصلاة الثالثة والثلاثون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0044` | 2 | القسم الثاني > الصلاة الرابعة والثلاثون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0045` | 2 | القسم الثاني > الصلاة الخامسة والثلاثون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0046` | 2 | القسم الثاني > الصلاة السادسة والثلاثون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0047` | 2 | القسم الثاني > الصلاة السابعة والثلاثون | `salawat_formula` | 6 | `draft` | `parked_experimental` |
+| `ASH-IMG-0048` | 2 | القسم الثاني > الصلاة الثامنة والثلاثون | `salawat_formula` | 5 | `draft` | `parked_experimental` |
+| `ASH-IMG-0049` | 2 | القسم الثاني > الصلاة التاسعة والثلاثون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0050` | 2 | القسم الثاني > الصلاة الأربعون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0051` | 2 | القسم الثاني > الصلاة الحادية والأربعون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0052` | 2 | القسم الثاني > الصلاة الثانية والأربعون | `salawat_formula` | 14 | `draft` | `parked_experimental` |
+| `ASH-IMG-0053` | 2 | القسم الثاني > الصلاة الثالثة والأربعون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0054` | 2 | القسم الثاني > الصلاة الرابعة والأربعون | `salawat_formula` | 12 | `draft` | `parked_experimental` |
+| `ASH-IMG-0055` | 2 | القسم الثاني > الصلاة السادسة والأربعون | `salawat_formula` | 10 | `draft` | `parked_experimental` |
+| `ASH-IMG-0056` | 2 | القسم الثاني > الصلاة السابعة والأربعون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0057` | 2 | القسم الثاني > الصلاة الثامنة والأربعون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0058` | 2 | القسم الثاني > الصلاة التاسعة والأربعون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0059` | 2 | القسم الثاني > الصلاة الخمسون | `salawat_formula` | 14 | `draft` | `parked_experimental` |
+| `ASH-IMG-0060` | 2 | القسم الثاني > الصلاة الثانية والخمسون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0061` | 2 | القسم الثاني > الصلاة الثالثة والخمسون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0062` | 2 | القسم الثاني > الصلاة الرابعة والخمسون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0063` | 2 | القسم الثاني > الصلاة الخامسة والخمسون | `salawat_formula` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0064` | 2 | القسم الثاني > الصلاة السادسة والخمسون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0065` | 2 | القسم الثاني > الصلاة السابعة والخمسون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0066` | 2 | القسم الثاني > الصلاة الثامنة والخمسون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0067` | 2 | القسم الثاني > الصلاة التاسعة والخمسون | `salawat_formula` | 5 | `draft` | `parked_experimental` |
+| `ASH-IMG-0068` | 2 | القسم الثاني > الصلاة الستون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0069` | 2 | القسم الثاني > الصلاة الحادية والستون | `salawat_formula` | 8 | `draft` | `parked_experimental` |
+| `ASH-IMG-0070` | 2 | القسم الثاني > الصلاة الثالثة والستون | `salawat_formula` | 4 | `draft` | `parked_experimental` |
+| `ASH-IMG-0071` | 2 | القسم الثاني > الصلاة الرابعة والستون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0072` | 2 | القسم الثاني > الصلاة الخامسة والستون | `salawat_formula` | 2 | `draft` | `parked_experimental` |
+| `ASH-IMG-0073` | 2 | القسم الثاني > الصلاة السادسة والستون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0074` | 2 | القسم الثاني > الصلاة السابعة والستون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0075` | 2 | القسم الثاني > الصلاة الثامنة والستون | `salawat_formula` | 1 | `draft` | `parked_experimental` |
+| `ASH-IMG-0076` | 2 | القسم الثاني > الصلاة التاسعة والستون | `salawat_formula` | 17 | `draft` | `parked_experimental` |
+| `ASH-IMG-0077` | 1 | الخاتمة في سبع قصائد فرائد | `modern_turath` | 3 | `draft` | `parked_experimental` |
+| `ASH-IMG-0078` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الأولى | `poetic_closing` | 199 | `draft` | `parked_experimental` |
+| `ASH-IMG-0079` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الثانية | `poetic_closing` | 192 | `draft` | `parked_experimental` |
+| `ASH-IMG-0080` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الثالثة | `poetic_closing` | 201 | `draft` | `parked_experimental` |
+| `ASH-IMG-0081` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الرابعة | `poetic_closing` | 201 | `draft` | `parked_experimental` |
+| `ASH-IMG-0082` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة الخامسة | `poetic_closing` | 185 | `draft` | `parked_experimental` |
+| `ASH-IMG-0083` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة السادسة | `poetic_closing` | 199 | `draft` | `parked_experimental` |
+| `ASH-IMG-0084` | 2 | الخاتمة في سبع قصائد فرائد > القصيدة السابعة | `poetic_closing` | 212 | `draft` | `parked_experimental` |
 
 ## Briefs
 
